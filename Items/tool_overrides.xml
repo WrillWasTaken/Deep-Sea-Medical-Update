@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Override>
+  <Items>
+    <!-- Overrided to include ether tank -->
+    <Item name="" identifier="divingmask" scale="0.5" category="Equipment" Tags="smallitem,diving,lightdiving" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light">
+      <Price baseprice="100">
+        <Price locationtype="outpost" multiplier="0.9" minavailable="5" />
+        <Price locationtype="city" multiplier="0.85" minavailable="7" />
+        <Price locationtype="research" multiplier="1" minavailable="5" />
+        <Price locationtype="military" multiplier="1" minavailable="6" />
+        <Price locationtype="mine" multiplier="1.25" minavailable="15" />
+      </Price>
+      <PreferredContainer primary="divingcab" minamount="1" maxamount="2" spawnprobability="1" />
+      <PreferredContainer primary="supplycab" minamount="1" maxamount="1" spawnprobability="0.25" />
+      <PreferredContainer primary="abandonedsupplycab" minamount="1" maxamount="3" spawnprobability="1" />
+      <Deconstruct time="10">
+        <Item identifier="plastic" />
+        <Item identifier="rubber" />
+      </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="20">
+        <RequiredSkill identifier="mechanical" level="25" />
+        <RequiredItem identifier="plastic" />
+        <RequiredItem identifier="rubber" />
+        <RequiredItem identifier="rubber" />
+      </Fabricate>
+      <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="515,322,57,62" origin="0.5,0.5" />
+      <Sprite name="Diving Mask" texture="Content/Items/Jobgear/headgears.png" depth="0.55" sourcerect="226,326,69,68" origin="0.5,0.5" />
+      <Body width="40" height="35" density="15" />
+      <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect" displaycontainedstatus="true">
+        <sprite name="Diving Mask Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" hideotherwearables="false" sourcerect="226,326,69,68" origin="0.4,0.3" hidewearablesoftype="moustache,beard" />
+        <StatusEffect type="OnWearing" target="Character" HideFace="true" SpeedMultiplier="0.9" setvalue="true" disabledeltatime="true" />
+        <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.5" comparison="Or">
+          <Conditional IsDead="false" />
+          <RequiredItem items="oxygentank" type="Contained" />
+        </StatusEffect>
+        <!-- Ether tank, new -->
+        <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.5" comparison="Or">
+          <Conditional IsDead="false" />
+          <RequiredItem items="ethertank" type="Contained" />
+          <Affliction identifier="anesthesia" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-100.0" Oxygen="-5.0" Condition="-5.0">
+          <Conditional IsDead="false" />
+          <RequiredItem items="weldingfueltank" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-100.0" Oxygen="-7.0" Condition="-5.0">
+          <RequiredItem items="incendiumfueltank" type="Contained" />
+          <Affliction identifier="burn" amount="0.1" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.3" comparison="Or">
+          <Conditional IsDead="false" />
+          <RequiredItem items="oxygeniteshard" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500.0" Condition="-0.1" comparison="Or">
+          <Conditional IsDead="false" />
+          <RequiredItem items="oxygenitetank" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Contained,Character" SpeedMultiplier="1.1" setvalue="true" comparison="Or">
+          <Conditional IsDead="false" />
+          <RequiredItem items="oxygeniteshard" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Contained,Character" SpeedMultiplier="1.2" setvalue="true" comparison="Or">
+          <Conditional IsDead="false" />
+          <RequiredItem items="oxygenitetank" type="Contained" />
+        </StatusEffect>
+      </Wearable>
+      <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="tank">
+        <Containable items="oxygensource,weldingtoolfuel,ethertank" />
+      </ItemContainer>
+    </Item>
+    <!-- Gives affliction that lets surgical tools know when on the bed. -->
+    <Item name="" identifier="opdeco_hospitalbed" width="416" height="192" texturescale="1.0,1.0" scale="0.5" noninteractable="false" category="Decorative">
+      <Upgrade gameversion="0.12.0.0" noninteractable="false" />
+      <sprite texture="Content/Map/Outposts/Art/MedBayAssets.png" sourcerect="96,304,416,192" depth="0.97" premultiplyalpha="false" origin="0.5,0.5" />
+      <Controller UserPos="0,-300" direction="Right" hidehud="false" canbeselected="true">
+        <limbposition limb="Head" position="-6,-10" />
+        <limbposition limb="Torso" position="104,0" />
+        <limbposition limb="Waist" position="244,-80" />
+        <limbposition limb="RightFoot" position="380,-20" />
+        <limbposition limb="LeftFoot" position="380,-20" />
+        <limbposition limb="RightHand" position="234,-10" allowusinglimb="false" />
+        <limbposition limb="LeftHand" position="234,-10" allowusinglimb="false" />
+        <StatusEffect type="OnActive" target="Character">
+          <reduceaffliction type="damage" strength="0.05" />
+          <reduceaffliction identifier="bloodloss" strength="0.05" />
+          <reduceaffliction identifier="bleeding" strength="0.05" />
+          <reduceaffliction identifier="nausea" strength="0.05" />
+          <reduceaffliction identifier="opiatewithdrawal" strength="0.05" />
+          <reduceaffliction identifier="opiateaddiction" strength="0.05" />
+          <reduceaffliction identifier="drunk" strength="0.05" />
+          <Affliction identifier="surgeryready" strength="1" />
+        </StatusEffect>
+      </Controller>
+    </Item>
+  </Items>
+</Override>

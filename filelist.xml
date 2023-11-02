@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Deep Sea Medical [Huskmod Compatible]" steamworkshopid="2581495442" corepackage="false" modversion="1.0.0" gameversion="0.14.9.0" installtime="1630053178" altnames="Deep Sea Medical [Huskmod Compatible]">
+  <Text file="%ModDir%/Texts/EnglishBetterMedical.xml" />
+  <NPCConversations file="%ModDir%/Texts/EnglishNPCConversations.xml" />
+  <Item file="%ModDir%/Items/med_overrides.xml" />
+  <Item file="%ModDir%/Items/new_meds.xml" />
+  <Item file="%ModDir%/Items/tool_overrides.xml" />
+  <Item file="%ModDir%/Items/new_tools.xml" />
+  <Item file="%ModDir%/Items/bionics.xml" />
+  <Afflictions file="%ModDir%/Afflictions/affliction_overrides.xml" />
+  <Afflictions file="%ModDir%/Afflictions/new_afflictions.xml" />
+  <Jobs file="%ModDir%/new_job.xml" />
+  <None file="%ModDir%/icon.png" />
+  <None file="%ModDir%/Afflictions/new_afflictions.png" />
+  <None file="%ModDir%/Items/bionics.png" />
+  <None file="%ModDir%/Items/new_drugs.png" />
+  <None file="%ModDir%/Items/new_tools.png" />
+  <None file="%ModDir%/Items/outfit_icon.png" />
+</contentpackage>
