@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
   <!-- Ether tank: gives anesthized affliction, allows surgery when not on medical bed -->
-  <Item name="" identifier="ethertank" category="Equipment,Misc" maxstacksize="8" Tags="smallitem,ethertank" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" allowdroppingonswap="true">
+  <Item name="" identifier="ethertank" category="Equipment,Medical" maxstacksize="8" Tags="smallitem,ethertank" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" allowdroppingonswap="true">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
     <Price baseprice="90">
       <Price locationtype="outpost" multiplier="1.2" minavailable="3" />
@@ -42,7 +42,7 @@
     </Holdable>
   </Item>
   <!-- Scalpel: gives incision affliction, begins surgery process; only if surgeryready -->
-  <Item name="" identifier="scalpel" category="Material" maxstacksize="4" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,syringe,surgerytool" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+  <Item name="" identifier="scalpel" category="Medical" maxstacksize="4" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,syringe,surgerytool" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="medcab" minamount="1" maxamount="3" spawnprobability="1.0" />
     <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="2" spawnprobability="0.4" />
     <Price baseprice="110" soldeverywhere="false">
@@ -91,7 +91,7 @@
     </MeleeWeapon>
   </Item>
   <!-- Suture Kit: removes incision affliction, ends surgery, stops bleeding from incision; only if surgeryready -->
-  <Item name="" identifier="suture" category="Material" maxstacksize="4" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,syringe,surgerytool" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+  <Item name="" identifier="suture" category="Medical" maxstacksize="4" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,syringe,surgerytool" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="medcab" minamount="2" maxamount="5" spawnprobability="1.0" />
     <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="3" spawnprobability="0.5" />
     <Price baseprice="80" soldeverywhere="false">
@@ -140,7 +140,7 @@
     </MeleeWeapon>
   </Item>
   <!-- Tweezers: removes gunshot wound if surgeryready and incision -->
-  <Item name="" identifier="tweezers" category="Material" maxstacksize="4" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,syringe,surgerytool" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+  <Item name="" identifier="tweezers" category="Medical" maxstacksize="4" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,syringe,surgerytool" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="medcab" minamount="1" maxamount="3" spawnprobability="1.0" />
     <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="2" spawnprobability="0.45" />
     <Price baseprice="120" soldeverywhere="false">
@@ -190,7 +190,7 @@
   </Item>
   <!--<SpawnItem identifier="ethanol" spawnposition="thisinventory"/>-->
   <!-- Autosurgeon: auto-matically does stuff, emergency use, uses whole battery per use -->
-  <Item name="" identifier="autosurgeon" category="Material" cargocontaineridentifier="mediccrate" tags="smallitem,medical,syringe,surgerytool" useinhealthinterface="true" impactsoundtag="impact_metal_light" scale="0.4">
+  <Item name="" identifier="autosurgeon" category="Medical" cargocontaineridentifier="mediccrate" tags="smallitem,medical,syringe,surgerytool" useinhealthinterface="true" impactsoundtag="impact_metal_light" scale="0.4">
     <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1.0" />
     <Deconstruct time="30">
       <Item identifier="steel" />
@@ -343,7 +343,7 @@
 		</ItemContainer>
   </Item>
   <!-- Autosurgeon program: bullet extraction -->
-  <Item name="" identifier="surgeonprogrambullet" category="Material" cargocontaineridentifier="mediccrate" description="" Tags="smallitem,schematic,surgerytool,surgeonprogram" spritecolor="200,255,120,255" InventoryIconColor="200,255,120,200" scale="0.5" impactsoundtag="impact_metal_light">
+  <Item name="" identifier="surgeonprogrambullet" category="Medical" cargocontaineridentifier="mediccrate" description="" Tags="smallitem,schematic,surgerytool,surgeonprogram" spritecolor="200,255,120,255" InventoryIconColor="200,255,120,200" scale="0.5" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1.0" />
     <InventoryIcon texture="new_tools.png" sourcerect="0,64,64,64" origin="0.5,0.5" />
     <Sprite texture="new_tools.png" sourcerect="10,74,45,43" depth="0.6" origin="0.5,0.5" />
@@ -368,7 +368,7 @@
     </Holdable>
   </Item>
   <!-- Surgical Scissors: removes organs, allowing transplants -->
-  <Item name="" identifier="surgeryscissors" category="Material" maxstacksize="4" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,syringe,surgerytool" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+  <Item name="" identifier="surgeryscissors" category="Medical" maxstacksize="4" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,syringe,surgerytool" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="medcab" minamount="1" maxamount="2" spawnprobability="1.0" />
     <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="2" spawnprobability="0.45" />
     <Price baseprice="180" soldeverywhere="false">
@@ -424,7 +424,7 @@
       </StatusEffect>
     </MeleeWeapon>
   </Item>
-  <Item name="" identifier="humanorgan" category="Material" maxstacksize="4" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft">
+  <Item name="" identifier="humanorgan" category="Medical" maxstacksize="4" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
     <PreferredContainer primary="medcab" minamount="1" maxamount="2" spawnprobability="1" />
     <PreferredContainer primary="wreckmedcab" minamount="0" maxamount="2" spawnprobability="0.5" />
@@ -511,7 +511,7 @@
   </Item>
   <!-- implants, able to be inserted into incision or autosurgeon'ed -->
   <!-- allow surgery anywhere -->
-  <Item name="" identifier="surgeryimplant" category="Material" maxstacksize="4" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,syringe" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+  <Item name="" identifier="surgeryimplant" category="Medical" maxstacksize="4" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,syringe" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
     <PreferredContainer primary="medcab" minamount="1" maxamount="2" />
     <PreferredContainer primary="wreckmedcab" minamount="0" maxamount="2" spawnprobability="0.6" />
@@ -558,7 +558,7 @@
     </Holdable>
   </Item>
   <!-- one-time all addiction gone -->
-  <Item name="" identifier="addictionimplant" category="Material" maxstacksize="4" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,syringe" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+  <Item name="" identifier="addictionimplant" category="Medical" maxstacksize="4" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,syringe" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
     <PreferredContainer primary="medcab" minamount="0" maxamount="2" spawnprobability="0.7" />
     <PreferredContainer primary="wreckmedcab" minamount="0" maxamount="3" spawnprobability="0.6" />
@@ -610,7 +610,7 @@
     </Holdable>
   </Item>
   <!-- Sleepy pen: 5 uses, injects whatever poison is in it into someone without any noise -->
-  <Item name="" identifier="sleepypen" category="Material" cargocontaineridentifier="mediccrate" tags="smallitem,medical,syringe" useinhealthinterface="true" impactsoundtag="impact_metal_light" scale="0.4">
+  <Item name="" identifier="sleepypen" category="Weapon,Medical" cargocontaineridentifier="mediccrate" tags="smallitem,medical,syringe" useinhealthinterface="true" impactsoundtag="impact_metal_light" scale="0.4">
     <PreferredContainer primary="toxcab,abandonedtoxcab" minamount="1" maxamount="1" spawnprobability="0.7" />
     <Deconstruct time="30">
       <Item identifier="iron" />
@@ -813,7 +813,7 @@
   <!-- ~~~~~~~~~~~~~~ -->
   <!-- DIY version of the hospital bed, craftable, buyable; no healing benefits like stationary one -->
   <!-- possible problem width= + height=??-->
-  <Item name="" identifier="foldingsurgerytable" tags="mediumitem,operatingtable" texturescale="1.0,1.0" scale="0.5" noninteractable="false" category="Equipment" impactsoundtag="impact_metal_heavy"> <!--operatingtable tag for compat reasons-->
+  <Item name="" identifier="foldingsurgerytable" tags="mediumitem,operatingtable" texturescale="1.0,1.0" scale="0.5" noninteractable="false" category="Misc,Medical" impactsoundtag="impact_metal_heavy"> <!--operatingtable tag for compat reasons-->
     <sprite texture="new_tools.png" sourcerect="0,320,416,192" depth="0.97" premultiplyalpha="false" origin="0.5,0.5" />
     <InventoryIcon texture="new_tools.png" sourcerect="256,128,64,64" origin="0.5,0.5" />
     <Body width="416" height="192" density="60" />

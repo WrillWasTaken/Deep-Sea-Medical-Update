@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
-  <Item name="" identifier="humanflesh" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft">
+  <Item name="" identifier="humanflesh" category="Medical" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
     <PreferredContainer primary="wreckmedcab" minamount="0" maxamount="4" spawnprobability="0.65" />
     <SuitableTreatment identifier="fleshwithdrawal" suitability="30" />
@@ -20,7 +20,7 @@
       </StatusEffect>
     </Holdable>
   </Item>
-  <Item name="" identifier="basebionic" category="Material" maxstacksize="4" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+  <Item name="" identifier="basebionic" category="Material,Medical" maxstacksize="4" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
     <Price baseprice="450" soldeverywhere="false">
       <Price locationtype="outpost" multiplier="1.25" sold="false" />
@@ -298,7 +298,7 @@
       </StatusEffect>
     </Holdable>
   </Item>
-  <Item name="" identifier="calyxanidebionic" category="Material" maxstacksize="4" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+  <Item name="" identifier="calyxanidebionic" category="medical" maxstacksize="4" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
     <Price baseprice="610" soldeverywhere="false">
       <Price locationtype="outpost" multiplier="1.25" minavailable="1" />
@@ -353,7 +353,7 @@
       </StatusEffect>
     </Holdable>
   </Item>
-  <Item name="" identifier="bloodbionic" category="Material" maxstacksize="4" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+  <Item name="" identifier="bloodbionic" category="medical" maxstacksize="4" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
     <Price baseprice="780" soldeverywhere="false">
       <Price locationtype="outpost" multiplier="1.25" sold="false" />

@@ -2,7 +2,7 @@
 <Override>
   <Items>
     <!-- Blood loss gain is hardcoded, no bandaged affliction :( -->
-    <Morphine name="" identifier="antidama1" aliases="Corrigodone" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+    <Morphine name="" identifier="antidama1" aliases="Corrigodone" category="Medical" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <PreferredContainer primary="medcab" minamount="2" maxamount="5" />
       <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="3" spawnprobability="0.5" />
@@ -145,7 +145,7 @@
       </Projectile>
     </Morphine>
     <!-- Fentanyl -->
-    <Fentanyl name="" identifier="antidama2" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+    <Fentanyl name="" identifier="antidama2" category="medical" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <PreferredContainer primary="medcab" minamount="0" maxamount="4" spawnprobability="0.5" />
       <PreferredContainer primary="supplycab" minamount="0" maxamount="4" spawnprobability="0.25" />
@@ -278,7 +278,7 @@
         </StatusEffect>
       </Projectile>
     </Fentanyl>
-    <Opium name="" identifier="opium" category="Material" maxstacksize="8" Tags="smallitem,chem" description="" cargocontaineridentifier="mediccrate" scale="0.5" useinhealthinterface="true">
+    <Opium name="" identifier="opium" category="Material,Medical" maxstacksize="8" Tags="smallitem,chem" description="" cargocontaineridentifier="mediccrate" scale="0.5" useinhealthinterface="true">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <PreferredContainer primary="medfabcab" minamount="4" maxamount="8" spawnprobability="1" />
       <PreferredContainer primary="wreckmedcab" minamount="0" maxamount="2" spawnprobability="0.5" />
@@ -507,7 +507,7 @@
         </StatusEffect>
       </MeleeWeapon>
     </AntibioticGlue>
-    <TonicLiquid name="" identifier="tonicliquid" category="Material" maxstacksize="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+    <TonicLiquid name="" identifier="tonicliquid" category="Material,Medical" maxstacksize="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <PreferredContainer primary="medcab" spawnprobability="0.5" />
       <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="2" spawnprobability="0.05" />
@@ -558,7 +558,7 @@
       </MeleeWeapon>
     </TonicLiquid>
     <!-- alien blood toxic to human -->
-    <Item name="" identifier="alienblood" category="Material" maxstacksize="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,medical" useinhealthinterface="true" scale="0.5">
+    <Item name="" identifier="alienblood" category="Material,Medical" maxstacksize="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,medical" useinhealthinterface="true" scale="0.5">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <PreferredContainer primary="storageorgan" minamount="1" maxamount="2" spawnprobability="1" />
       <PreferredContainer primary="toxcontainer,medcontainer,locker" />
@@ -601,7 +601,7 @@
         </StatusEffect>
       </MeleeWeapon>
     </Item>
-    <Naloxone name="" identifier="antinarc" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_metal_light">
+    <Naloxone name="" identifier="antinarc" category="Medical" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_metal_light">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <PreferredContainer primary="medcab" spawnprobability="0.8" />
       <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="2" spawnprobability="0.5" />
@@ -671,7 +671,7 @@
       </Projectile>
     </Naloxone>
     <!-- add overdose, addiction and withdrawal -->
-    <Methamphetamine name="" identifier="meth" category="Material" maxstacksize="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+    <Methamphetamine name="" identifier="meth" category="Medical" maxstacksize="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <PreferredContainer primary="medcab" spawnprobability="0.1" />
       <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="2" spawnprobability="0.05" />
@@ -798,7 +798,7 @@
         </StatusEffect>
       </Projectile>
     </Methamphetamine>
-    <AnabolicSteroids name="" identifier="steroids" category="Material" maxstacksize="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+    <AnabolicSteroids name="" identifier="steroids" category="Medical" maxstacksize="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <PreferredContainer primary="medcab" spawnprobability="0.1" />
       <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.05" />
@@ -920,7 +920,7 @@
       </Projectile>
     </AnabolicSteroids>
     <!-- give both steroid and meth addiction -->
-    <Hyperzine name="" identifier="hyperzine" category="Material" maxstacksize="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+    <Hyperzine name="" identifier="hyperzine" category="Medical" maxstacksize="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <PreferredContainer primary="medcab" spawnprobability="0.1" />
       <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.05" />
@@ -1110,7 +1110,7 @@
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Ethanol>
-    <Calyxanide name="" identifier="calyxanide" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+    <Calyxanide name="" identifier="calyxanide" category="Medical" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <PreferredContainer primary="medcab" minamount="1" maxamount="4" spawnprobability="1" />
       <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="4" spawnprobability="0.5" />
@@ -1195,7 +1195,7 @@
       </Projectile>
     </Calyxanide>
     <!-- changed to fix organ rejection -->
-    <Stabilozine name="" identifier="stabilozine" category="Material" maxstacksize="8" tags="smallitem,chem,medical,syringe" cargocontaineridentifier="mediccrate" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+    <Stabilozine name="" identifier="stabilozine" category="Material,Medical" maxstacksize="8" tags="smallitem,chem,medical,syringe" cargocontaineridentifier="mediccrate" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <PreferredContainer primary="medfabcab" minamount="2" maxamount="8" spawnprobability="1" />
       <PreferredContainer primary="wreckmedcab" minamount="0" maxamount="2" spawnprobability="0.5" />
