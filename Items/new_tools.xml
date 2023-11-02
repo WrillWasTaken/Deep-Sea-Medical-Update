@@ -392,24 +392,25 @@
         <Conditional surgeryready="gte 1" />
         <Conditional incision="gte 1" />
       </StatusEffect>
-      <StatusEffect type="OnSuccess" target="UseTarget" disabledeltatime="true" comparison="And">
+      <StatusEffect type="OnUse" target="UseTarget" disabledeltatime="true" comparison="And">
         <Conditional surgeryready="gte 1" />
         <Conditional incision="gte 1" />
-        <Conditional organdamage="lte 3" />
+        <Conditional organdamage="lt 1" />
         <SpawnItem identifier="humanorgan" spawnposition="This" />
       </StatusEffect>
-      <StatusEffect type="OnFailure" target="UseTarget" disabledeltatime="true" comparison="And">
-        <Conditional surgeryready="gte 1" />
-        <Conditional incision="gte 1" />
-        <Conditional organdamage="lte 3" />
-        <SpawnItem identifier="humanorgan" spawnposition="This" />
-      </StatusEffect>
-      <StatusEffect tags="medical" type="OnFailure" target="Limb" disabledeltatime="true" comparison="And">
+      <StatusEffect tags="medical" type="OnSuccess" target="Limb" disabledeltatime="true" comparison="And" delay="0.05"> <!--delay is really shitcodey but it makes sure the check for organdamage happens BEFORE it's healed, otherwise woohoo infinite organs-->
         <Conditional surgeryready="gte 1" />
         <Conditional incision="gte 1" />
         <Sound file="Content/Items/Medical/Syringe.ogg" range="400" />
-        <Affliction identifier="missingorgan" amount="9" />
-        <ReduceAffliction identifier="organdamage" amount="20" />
+        <Affliction identifier="missingorgan" amount="10" />
+        <Affliction identifier="organdamage" amount="-20" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnFailure" target="Limb" disabledeltatime="true" comparison="And" delay="0.05">
+        <Conditional surgeryready="gte 1" />
+        <Conditional incision="gte 1" />
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="400" />
+        <Affliction identifier="missingorgan" amount="10" />
+        <Affliction identifier="organdamage" amount="-20" />
       </StatusEffect>
       <!-- Remove the item when fully used -->
       <StatusEffect type="OnBroken" target="This">
