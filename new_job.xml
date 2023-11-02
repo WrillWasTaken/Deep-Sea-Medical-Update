@@ -58,6 +58,7 @@
 	<Item identifier="healthscanner" />
 	<Item identifier="autosurgeon">
 		<Item identifier="surgeonprogrambullet" showpreview="false" />
+		<Item identifier="batterycell" showpreview="false" />
 	</Item>
 	<Item identifier="divingmask" showpreview="false">
 		<Item identifier="ethertank" showpreview="true" />

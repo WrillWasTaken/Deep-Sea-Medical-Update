@@ -15,9 +15,15 @@
     <Deconstruct time="10">
       <Item identifier="aluminium" />
     </Deconstruct>
-    <Fabricate suitablefabricators="fabricator" displayname="EtherTankEmpty" outcondition="0.0">
+    <Fabricate suitablefabricators="medicalfabricator">
+      <RequiredSkill identifier="medical" level="30" />
       <RequiredItem identifier="aluminium" />
 			<RequiredItem identifier="chloralhydrate" />
+    </Fabricate>
+		<Fabricate suitablefabricators="medicalfabricator" displayname="recycleitem" requiredtime="5">
+      <RequiredSkill identifier="medical" level="30" />
+      <RequiredItem identifier="ethertank" mincondition="0.0" maxcondition="0.1" usecondition="false"/>
+      <RequiredItem identifier="chloralhydrate" />
     </Fabricate>
     <InventoryIcon texture="new_tools.png" sourcerect="64,64,64,64" origin="0.5,0.5" />
     <Sprite texture="new_tools.png" sourcerect="80,254,24,66" depth="0.55" origin="0.5,0.5" />
