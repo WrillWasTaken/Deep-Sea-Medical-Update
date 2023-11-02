@@ -86,8 +86,8 @@
   <entitydescription.surgeonprogramorgan>Datachip containing autosurgeon instructions for the removal of a organ, primarily for transplant reasons.</entitydescription.surgeonprogramorgan>
   <jobname.medicaldoctor3>Surgeon</jobname.medicaldoctor3>
   <jobdescription.medicaldoctor3>These specialists are prepared to quickly and effectively perform surgery in a submarine ship for extended amounts of time.</jobdescription.medicaldoctor3>
-  <entityname.dsm_doctorsuniform3>Surgeon's Uniform</entityname.dsm_doctorsuniform3>
-  <entitydescription.dsm_doctorsuniform3>Makes you look like you might be useful if your forged medical degree didn't already show that.</entitydescription.dsm_doctorsuniform3>
+  <entityname.doctorsuniform3>Surgeon's Uniform</entityname.doctorsuniform3>
+  <entitydescription.doctorsuniform3>Makes you look like you might be useful if your forged medical degree didn't already show that.</entitydescription.doctorsuniform3>
   <entitydescription.antidama1>A powerful opiate for treating pain and stabilizing critical patients, but will cause shortness of breath and eventual dependency with overuse.</entitydescription.antidama1>
   <entitydescription.antidama2>A powerful opiate for treating pain and stabilizing critical patients, but will cause shortness of breath and eventual dependency with overuse.</entitydescription.antidama2>
   <entitydescription.tonicliquid>A medical solution that's commonly used as an ingredient in more complex medical compounds.</entitydescription.tonicliquid>
