@@ -1,0 +1,17 @@
+changelist
+
+bugs:
+EVERYTHING TARGETS CHARACTER INSTEAD OF USETARGET AAAAAAAAAAAAA - wip
+surgical scissors not checking for organs properly - fixed (balance change included)
+autosurgeon programs uncraftable (apparently a bug ... ?) - fixed
+surgeon outfit sprite not updated for human resprite - fixed
+3rd itemset not appearing - fixed
+
+
+
+
+balancechanges:
+ethertanks dont spawn in supplycab, increased spawn in medcabs instead and made craftable (1x choral hydrate, 1x aluminium)
+organ damage harvesting threshold reduced to 1
+surgeon itemset spawns with batterycell in autosurgeon
+combatstim provides a hp boost instead of healing, overdose gives negative damage resistance (increased damage taken) which lets you keep alive on stims, but make them nonviable for prolonged combat
