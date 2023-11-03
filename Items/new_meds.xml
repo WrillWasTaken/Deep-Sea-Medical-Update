@@ -34,11 +34,11 @@
     <InventoryIcon texture="new_drugs.png" sourcerect="128,0,64,64" origin="0.5,0.5" />
     <Sprite texture="new_drugs.png" sourcerect="115,187,37,69" depth="0.6" origin="0.5,0.5" />
     <Body width="35" height="65" density="20" />
-    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
+    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect" HitOnlyCharacters="True">
       <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
       <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
       <RequiredSkill identifier="medical" level="30" />
-      <StatusEffect tags="medical" type="OnSuccess" target="Character" duration="10" AllowWhenBroken="True">
+      <StatusEffect tags="medical" type="OnSuccess" target="UseTarget" duration="10">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
         <ReduceAffliction identifier="damage" amount="5" />
         <!-- organdamage is declared not damage so have to compensate -->
@@ -46,7 +46,7 @@
         <ReduceAffliction identifier="organrejection" amount="5" />
         <ReduceAffliction identifier="burn" amount="5" />
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnFailure" target="UseTarget" duration="10" AllowWhenBroken="True">
+      <StatusEffect tags="medical" type="OnFailure" target="UseTarget" duration="10">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
         <ReduceAffliction identifier="burn" amount="2.5" />
         <!-- organdamage is declared not damage so have to compensate -->
@@ -63,7 +63,7 @@
       <StatusEffect type="OnImpact" target="This" Condition="-100.0" disabledeltatime="true">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnImpact" target="Character" duration="10">
+      <StatusEffect tags="medical" type="OnImpact" Target="UseTarget" duration="10">
         <ReduceAffliction identifier="burn" amount="2" />
         <!-- organdamage is declared not damage so have to compensate -->
         <ReduceAffliction identifier="organdamage" amount="2" />
@@ -94,30 +94,30 @@
     <InventoryIcon texture="new_drugs.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
     <Sprite texture="new_drugs.png" sourcerect="0,187,37,69" depth="0.6" origin="0.5,0.5" />
     <Body width="35" height="65" density="20" />
-    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
+    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect" HitOnlyCharacters="True">
       <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
       <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
       <RequiredSkill identifier="medical" level="5"></RequiredSkill>
       <!-- Check all poisons -->
-      <StatusEffect tags="medical" type="OnUse" target="Character" duration="1.0">
+      <StatusEffect tags="medical" type="OnUse" Target="UseTarget" duration="1.0">
         <Conditional morbusinepoisoning="lt 16" />
         <ReduceAffliction identifier="morbusinepoisoning" amount="100" />
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnUse" target="Character" duration="1.0">
+      <StatusEffect tags="medical" type="OnUse" Target="UseTarget" duration="1.0">
         <Conditional cyanidepoisoning="lt 16" />
         <ReduceAffliction identifier="cyanidepoisoning" amount="100" />
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnUse" target="Character" duration="1.0">
+      <StatusEffect tags="medical" type="OnUse" Target="UseTarget" duration="1.0">
         <Conditional sufforinpoisoning="lt 16" />
         <ReduceAffliction identifier="sufforinpoisoning" amount="100" />
       </StatusEffect>
       <!-- Lower deliriumine, not cure, as it wont work for some reason, good for delaying for an antidote -->
-      <StatusEffect tags="medical" type="OnUse" target="Character" duration="3.0">
+      <StatusEffect tags="medical" type="OnUse" Target="UseTarget" duration="3.0">
         <Conditional deliriuminepoisoning="lt 25" />
         <ReduceAffliction identifier="deliriuminepoisoning" amount="100" />
       </StatusEffect>
       <!-- Rid of good stuff too -->
-      <StatusEffect tags="medical" type="OnUse" target="Character" duration="1.0">
+      <StatusEffect tags="medical" type="OnUse" Target="UseTarget" duration="1.0">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
         <Affliction identifier="instavomit" amount="1" />
         <Affliction identifier="nausea" amount="9" />
@@ -130,7 +130,7 @@
         <ReduceAffliction identifier="strengthen" amount="60" />
         <ReduceAffliction identifier="morphineaffliction" amount="60" />
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnFailure" target="Character" duration="1.0">
+      <StatusEffect tags="medical" type="OnFailure" Target="UseTarget" duration="1.0">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
         <Affliction identifier="instavomit" amount="1" />
         <Affliction identifier="nausea" amount="17" />
@@ -171,11 +171,11 @@
     <InventoryIcon texture="new_drugs.png" sourcerect="0,64,64,64" origin="0.5,0.5" />
     <Sprite texture="new_drugs.png" sourcerect="190,187,37,69" depth="0.6" origin="0.5,0.5" />
     <Body width="35" height="65" density="20" />
-    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
+    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect" HitOnlyCharacters="True">
       <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
       <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
       <RequiredSkill identifier="medical" level="10"></RequiredSkill>
-      <StatusEffect tags="medical" type="OnUse" target="Character" duration="12.0">
+      <StatusEffect tags="medical" type="OnUse" Target="UseTarget" duration="12.0">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
         <ReduceAffliction identifier="bloodclot" amount="100" />
       </StatusEffect>
@@ -202,15 +202,15 @@
     <InventoryIcon texture="new_drugs.png" sourcerect="64,64,64,64" origin="0.5,0.5" />
     <Sprite texture="new_drugs.png" sourcerect="78,187,37,69" depth="0.6" origin="0.5,0.5" />
     <Body width="35" height="65" density="20" />
-    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
+    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect" HitOnlyCharacters="True">
       <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
       <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
       <RequiredSkill identifier="medical" level="15"></RequiredSkill>
-      <StatusEffect tags="medical" type="OnUse" target="Character" duration="4.0">
+      <StatusEffect tags="medical" type="OnUse" Target="UseTarget" duration="4.0">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
         <Affliction identifier="bloodclot" amount="0.65" />
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnUse" target="Character" duration="20.0">
+      <StatusEffect tags="medical" type="OnUse" Target="UseTarget" duration="20.0">
         <ReduceAffliction identifier="bleeding" amount="0.25" />
         <ReduceAffliction identifier="incision" amount="5" />
       </StatusEffect>
@@ -240,9 +240,9 @@
     <InventoryIcon texture="new_drugs.png" sourcerect="256,0,64,64" origin="0.5,0.5" />
     <Sprite texture="new_drugs.png" sourcerect="152,187,37,69" depth="0.6" origin="0.5,0.5" />
     <Body width="35" height="65" density="20" />
-    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
+    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect" HitOnlyCharacters="True">
       <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
-      <StatusEffect tags="poison" type="OnUse" target="Character">
+      <StatusEffect tags="poison" type="OnUse" Target="UseTarget">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
         <Affliction identifier="ants" amount="1" />
       </StatusEffect>
@@ -280,17 +280,17 @@
     <InventoryIcon texture="new_drugs.png" sourcerect="64,0,64,64" origin="0.5,0.5" />
     <Sprite texture="new_drugs.png" sourcerect="40,187,37,69" depth="0.6" origin="0.5,0.5" />
     <Body width="35" height="65" density="20" />
-    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
+    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect" HitOnlyCharacters="True">
       <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
       <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
       <RequiredSkill identifier="medical" level="15" />
-      <StatusEffect tags="medical" type="OnSuccess" target="Character" duration="10">
+      <StatusEffect tags="medical" type="OnSuccess" target="UseTarget" duration="10">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
         <ReduceAffliction identifier="blunttrauma" amount="5" />
         <ReduceAffliction identifier="explosiondamage" amount="5" />
         <ReduceAffliction identifier="internaldamage" amount="2.5" />
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnFailure" target="Character" duration="10">
+      <StatusEffect tags="medical" type="OnFailure" target="UseTarget" duration="10">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
         <ReduceAffliction identifier="blunttrauma" amount="2.5" />
         <ReduceAffliction identifier="explosiondamage" amount="2.5" />
@@ -305,7 +305,7 @@
       <StatusEffect type="OnImpact" target="This" Condition="-100.0" disabledeltatime="true">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnImpact" target="Character" duration="10">
+      <StatusEffect tags="medical" type="OnImpact" Target="UseTarget" duration="10">
         <ReduceAffliction identifier="blunttrauma" amount="2" />
         <ReduceAffliction identifier="explosiondamage" amount="2" />
       </StatusEffect>
@@ -326,16 +326,16 @@
     <InventoryIcon texture="new_drugs.png" sourcerect="256,64,64,64" origin="0.5,0.5" />
     <Sprite texture="new_drugs.png" sourcerect="152,187,37,69" depth="0.6" origin="0.5,0.5" />
     <Body width="35" height="65" density="20" />
-    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
+    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
       <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
       <RequiredSkill identifier="medical" level="5"></RequiredSkill>
-      <StatusEffect tags="medical" type="OnUse" target="Character" duration="3.0">
+      <StatusEffect tags="medical" type="OnUse" Target="UseTarget" duration="3.0">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
         <ReduceAffliction identifier="ants" amount="100.0" />
         <Affliction identifier="burn" amount="3.0" />
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnFailure" target="Character" duration="3.0">
+      <StatusEffect tags="medical" type="OnFailure" Target="UseTarget" duration="3.0">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
         <ReduceAffliction identifier="ants" amount="100.0" />
         <Affliction identifier="burn" amount="5.0" />
@@ -357,9 +357,9 @@
       <RequiredItem identifier="meth" />
     </Fabricate>-->
     <Body width="35" height="70" density="20" />
-    <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+    <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-5,0" holdangle="10" reload="1.0">
       <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
-      <StatusEffect type="OnUse" target="Character" comparison="And">
+      <StatusEffect type="OnUse" Target="UseTarget" comparison="And">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
         <!-- HuskInfectionState must be less than 0.01 so you can't speed up the infection -->
         <Conditional huskinfection="lt 0.01" />
