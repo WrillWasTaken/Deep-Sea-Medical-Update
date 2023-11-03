@@ -144,6 +144,7 @@
         </StatusEffect>
       </Projectile>
     </Morphine>
+
     <!-- Fentanyl -->
     <Fentanyl name="" identifier="antidama2" category="medical" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
@@ -278,6 +279,7 @@
         </StatusEffect>
       </Projectile>
     </Fentanyl>
+
     <Opium name="" identifier="opium" category="Material,Medical" maxstacksize="8" Tags="smallitem,chem" description="" cargocontaineridentifier="mediccrate" scale="0.5" useinhealthinterface="true">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <PreferredContainer primary="medfabcab" minamount="4" maxamount="8" spawnprobability="1" />
@@ -340,6 +342,7 @@
         </StatusEffect>
       </MeleeWeapon>
     </Opium>
+
     <!-- slower bleed and burn healing for just reg bandage -->
     <Bandage name="" identifier="antibleeding1" aliases="Bandage" category="Equipment" Tags="smallitem,medical" maxstacksize="8" useinhealthinterface="true" cargocontaineridentifier="mediccrate" description="" scale="0.5" impactsoundtag="impact_soft">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
@@ -394,6 +397,7 @@
         </StatusEffect>
       </MeleeWeapon>
     </Bandage>
+
     <Plastiseal name="" identifier="antibleeding2" category="Equipment" Tags="smallitem,medical" maxstacksize="8" cargocontaineridentifier="mediccrate" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <PreferredContainer primary="medcab" minamount="4" maxamount="6" />
@@ -448,6 +452,7 @@
         </StatusEffect>
       </MeleeWeapon>
     </Plastiseal>
+
     <AntibioticGlue name="" identifier="antibleeding3" category="Equipment" Tags="smallitem,medical" maxstacksize="8" cargocontaineridentifier="mediccrate" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <PreferredContainer primary="medcab" minamount="1" maxamount="4" />
@@ -507,6 +512,7 @@
         </StatusEffect>
       </MeleeWeapon>
     </AntibioticGlue>
+
     <TonicLiquid name="" identifier="tonicliquid" category="Material,Medical" maxstacksize="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <PreferredContainer primary="medcab" spawnprobability="0.5" />
@@ -557,6 +563,7 @@
         </StatusEffect>
       </MeleeWeapon>
     </TonicLiquid>
+
     <!-- alien blood toxic to human -->
     <Item name="" identifier="alienblood" category="Material,Medical" maxstacksize="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,medical" useinhealthinterface="true" scale="0.5">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
@@ -601,6 +608,7 @@
         </StatusEffect>
       </MeleeWeapon>
     </Item>
+
     <Naloxone name="" identifier="antinarc" category="Medical" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_metal_light">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <PreferredContainer primary="medcab" spawnprobability="0.8" />
@@ -670,6 +678,7 @@
         </StatusEffect>
       </Projectile>
     </Naloxone>
+
     <!-- add overdose, addiction and withdrawal -->
     <Methamphetamine name="" identifier="meth" category="Medical" maxstacksize="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
@@ -798,6 +807,7 @@
         </StatusEffect>
       </Projectile>
     </Methamphetamine>
+
     <AnabolicSteroids name="" identifier="steroids" category="Medical" maxstacksize="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <PreferredContainer primary="medcab" spawnprobability="0.1" />
@@ -919,6 +929,7 @@
         </StatusEffect>
       </Projectile>
     </AnabolicSteroids>
+
     <!-- give both steroid and meth addiction -->
     <Hyperzine name="" identifier="hyperzine" category="Medical" maxstacksize="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
@@ -1065,6 +1076,7 @@
         </StatusEffect>
       </Projectile>
     </Hyperzine>
+
     <!-- Alcoholism -->
     <Ethanol name="" identifier="ethanol" category="Material" maxstacksize="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,medical,petfood2" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
@@ -1110,6 +1122,7 @@
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Ethanol>
+
     <Calyxanide name="" identifier="calyxanide" category="Medical" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <PreferredContainer primary="medcab" minamount="1" maxamount="4" spawnprobability="1" />
@@ -1194,6 +1207,7 @@
         </StatusEffect>
       </Projectile>
     </Calyxanide>
+
     <!-- changed to fix organ rejection -->
     <Stabilozine name="" identifier="stabilozine" category="Material,Medical" maxstacksize="8" tags="smallitem,chem,medical,syringe" cargocontaineridentifier="mediccrate" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
@@ -1239,5 +1253,60 @@
         </StatusEffect>
       </Projectile>
     </Stabilozine>
+
+		<Item name="" identifier="combatstimulantsyringe" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,chem,medical,syringe" allowasextracargo="true" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+			<PreferredContainer primary="medcab"/>
+			<Price baseprice="340" sold="false">
+				<Price storeidentifier="merchantoutpost" />
+				<Price storeidentifier="merchantcity" multiplier="0.9" />
+				<Price storeidentifier="merchantresearch" multiplier="0.9" />
+				<Price storeidentifier="merchantmilitary" multiplier="1.1" />
+				<Price storeidentifier="merchantmine" multiplier="1.1" />
+			</Price>
+			<Fabricate suitablefabricators="medicalfabricator" requiredtime="55" requiresrecipe="true">
+				<RequiredSkill identifier="medical" level="40" />
+				<RequiredItem identifier="sulphuriteshard" />
+				<RequiredItem identifier="antidama1" />
+			</Fabricate>
+			<Deconstruct time="20">
+				<Item identifier="sulphuricacid" />
+				<Item identifier="opium" />
+			</Deconstruct>
+			<InventoryIcon texture="Content/Items/Medical/Medicines.png" sourcerect="448,320,64,64" origin="0.5,0.5" />
+			<Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="264,309,37,68" depth="0.6" origin="0.5,0.5" />
+			<Body width="35" height="65" density="10.2" waterdragcoefficient="1"/>
+			<MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect" HitOnlyCharacters="true">
+				<RequiredSkill identifier="medical" level="35" />
+				<StatusEffect type="OnSuccess" target="This" Condition="-100.0" setvalue="true"/>
+				<StatusEffect type="OnFailure" target="This" Condition="-100.0" setvalue="true"/>
+				<StatusEffect tags="medical" type="OnSuccess" target="UseTarget" duration="5.0">
+					<Affliction identifier="combatstimulant" amount="15.0" />
+					<Affliction identifier="combatstimulantoverdose" amount="5.0" /> <!--25 total-->
+					<Affliction identifier="chemaddiction" amount="4.0" />
+				</StatusEffect>
+				<StatusEffect tags="medical" type="OnFailure" target="UseTarget" duration="5.0">
+					<Affliction identifier="combatstimulant" amount="15.0" />
+					<Affliction identifier="combatstimulantoverdose" amount="8" /> <!--40 total-->
+					<Affliction identifier="chemaddiction" amount="8.0" />
+				</StatusEffect>
+				<StatusEffect type="OnSuccess" target="UseTarget">
+					<Conditional entitytype="eq Character"/>
+					<Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+				</StatusEffect>
+				<StatusEffect type="OnFailure" target="UseTarget">
+					<Conditional entitytype="eq Character"/>
+					<Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+				</StatusEffect>
+				<StatusEffect type="OnImpact" target="UseTarget" multiplyafflictionsbymaxvitality="true" AllowWhenBroken="true">
+					<Affliction identifier="stun" amount="0.1" />
+				</StatusEffect>
+				<StatusEffect type="OnBroken" target="This">
+					<Remove />
+				</StatusEffect>
+			</MeleeWeapon>
+			<Projectile characterusable="false" launchimpulse="18.0" sticktocharacters="true" launchrotation="-90" inheritstatuseffectsfrom="MeleeWeapon" inheritrequiredskillsfrom="MeleeWeapon"/>
+			<SkillRequirementHint identifier="medical" level="35" />
+		</Item>
+
   </Items>
 </Override>

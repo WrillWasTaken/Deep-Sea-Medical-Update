@@ -139,4 +139,40 @@
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,768,128,128" color="195,60,60,255" origin="0,0" />
     </InternalDamage>
   </Override>
+
+	<!--completely redid functionality - provides a flat health boost and increased stun resistance instead of healing and depletes much faster. you will die if you don't seek medical attention before it wears off-->
+	<Override>
+		<Affliction
+    identifier="combatstimulant"
+    type="talentbuff"
+    isbuff="true"
+    hideiconafterdelay="true"
+    limbspecific="false"
+    maxstrength="100"
+    treatmentthreshold="1000"
+    iconcolors="33,75,78;126,211,224;126,211,224;227,247,249"
+    MedicalSkillGain="0.005">
+    <Effect minstrength="0" maxstrength="10"
+      strengthchange="-0.25"
+      resistancefor="stun"
+      minresistance="0"
+      maxresistance="0.75">
+      <StatusEffect target="Character" interval="0.1" disabledeltatime="true" minvitalitydecrease="0" maxvitalitydecrease="-50">
+        <ReduceAffliction identifier="chemwithdrawal" strength="0.1"/>
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="10" maxstrength="100"
+      strengthchange="-1"
+      resistancefor="stun"
+      minresistance="0.75"
+      maxresistance="0.9"
+			minvitalitydecrease="-50" 
+			maxvitalitydecrease="-125">
+      <StatusEffect target="Character" interval="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="chemwithdrawal" strength="0.2"/>
+      </StatusEffect>
+    </Effect>
+    <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="2,6" sheetelementsize="128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+	</Override>
 </Afflictions>
