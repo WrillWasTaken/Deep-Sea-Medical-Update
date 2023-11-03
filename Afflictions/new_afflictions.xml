@@ -28,6 +28,7 @@
 	<Affliction name="SurgeryReady" identifier="surgeryreadycrit" type="resistance" limbspecific="false" indicatorlimb="Torso" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="1">
     <Effect minstrength="0" maxstrength="4" strengthchange="-0.9" >
 			<StatusEffect type="Always" target="Character">
+				<Conditional Vitality="lt 1" />
 				<Affliction identifier="surgeryready" amount="1"/>
 			</StatusEffect>
 		</Effect>
@@ -85,8 +86,8 @@
         <Conditional methaddiction="lt 20" />
         <ReduceAffliction identifier="methwithdrawal" strength="0.1" />
       </StatusEffect>
-			<StatusEffect target="Character">
-				<Affliction identifier="nausea" strength="30" probability="0.1" />
+			<StatusEffect target="Character" disabledeltatime="true" interval="1">
+				<Affliction identifier="nausea" strength="15" probability="0.05" />
       </StatusEffect>
     </Effect>
     <Effect minstrength="40" maxstrength="80" minvitalitydecrease="20" maxvitalitydecrease="50" strengthchange="-0.1" minchromaticaberration="1.0" maxchromaticaberration="5.0" dialogflag="MethWithdrawalMedium">
@@ -98,8 +99,8 @@
         <Conditional methaddiction="lt 20" />
         <ReduceAffliction identifier="methwithdrawal" strength="0.1" />
       </StatusEffect>
-			<StatusEffect target="Character">
-				<Affliction identifier="nausea" strength="30" probability="0.3" />
+			<StatusEffect target="Character" disabledeltatime="true" interval="1">
+				<Affliction identifier="nausea" strength="15" probability="0.1" />
       </StatusEffect>
     </Effect>
     <Effect minstrength="80" maxstrength="100" minvitalitydecrease="50" maxvitalitydecrease="200" minscreendistort="0.0" maxscreendistort="3.0" strengthchange="-0.2" minchromaticaberration="5.0" maxchromaticaberration="10.0" minradialdistort="0.0" maxradialdistort="10.0" dialogflag="MethWithdrawalHigh">
@@ -108,8 +109,8 @@
         <Conditional methaddiction="lt 20" />
         <ReduceAffliction identifier="methwithdrawal" strength="0.05" />
       </StatusEffect>
-			<StatusEffect target="Character">
-				<Affliction identifier="nausea" strength="30" probability="0.1" />
+			<StatusEffect target="Character" disabledeltatime="true" interval="1">
+				<Affliction identifier="nausea" strength="15" probability="0.15" />
       </StatusEffect>
     </Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,768,128,128" color="209,121,84,255" origin="0,0" />
@@ -156,8 +157,8 @@
         <Conditional steroidaddiction="lt 20" />
         <ReduceAffliction identifier="steroidwithdrawal" strength="0.1" />
       </StatusEffect>
-			<StatusEffect target="Character">
-				<Affliction identifier="nausea" strength="30" probability="0.1" />
+			<StatusEffect target="Character" disabledeltatime="true" interval="1">
+				<Affliction identifier="nausea" strength="15" probability="0.05" />
       </StatusEffect>
     </Effect>
     <Effect minstrength="40" maxstrength="80" minvitalitydecrease="20" maxvitalitydecrease="50" strengthchange="-0.1" minchromaticaberration="1.0" maxchromaticaberration="5.0" dialogflag="SteroidWithdrawalMedium">
@@ -169,8 +170,8 @@
         <Conditional steroidaddiction="lt 20" />
         <ReduceAffliction identifier="steroidwithdrawal" strength="0.1" />
       </StatusEffect>
-			<StatusEffect target="Character">
-				<Affliction identifier="nausea" strength="30" probability="0.3" />
+			<StatusEffect target="Character" disabledeltatime="true" interval="1">
+				<Affliction identifier="nausea" strength="15" probability="0.1" />
       </StatusEffect>
     </Effect>
     <Effect minstrength="80" maxstrength="100" minvitalitydecrease="50" maxvitalitydecrease="200" minscreendistort="0.0" maxscreendistort="3.0" strengthchange="-0.2" minchromaticaberration="5.0" maxchromaticaberration="10.0" minradialdistort="0.0" maxradialdistort="10.0" dialogflag="MethWithdrawalHigh">
@@ -179,8 +180,8 @@
         <Conditional steroidaddiction="lt 20" />
         <ReduceAffliction identifier="steroidwithdrawal" strength="0.05" />
       </StatusEffect>
-			<StatusEffect target="Character">
-				<Affliction identifier="nausea" strength="30" probability="0.5" />
+			<StatusEffect target="Character" disabledeltatime="true" interval="1">
+				<Affliction identifier="nausea" strength="15" probability="0.15" />
       </StatusEffect>
     </Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,768,128,128" color="209,121,84,255" origin="0,0" />
@@ -280,7 +281,7 @@
         <Conditional alcoholaddiction="lt 20" />
         <ReduceAffliction identifier="alcoholwithdrawal" strength="0.1" />
       </StatusEffect>
-			<StatusEffect target="Character">
+			<StatusEffect target="Character"  disabledeltatime="true" interval="1">
 				<Affliction identifier="nausea" strength="12" probability="0.3" />
 			</StatusEffect>
     </Effect>
@@ -293,7 +294,7 @@
         <Conditional alcoholaddiction="lt 20" />
         <ReduceAffliction identifier="alcoholwithdrawal" strength="0.05" />
       </StatusEffect>
-			<StatusEffect target="Character">
+			<StatusEffect target="Character"  disabledeltatime="true" interval="1">
 				<Affliction identifier="nausea" strength="30" probability="0.5" />
 			</StatusEffect>
     </Effect>
@@ -394,7 +395,7 @@
         <Conditional fleshaddiction="lt 20" />
         <ReduceAffliction identifier="fleshwithdrawal" strength="0.1" />
       </StatusEffect>
-			<StatusEffect target="Character">
+			<StatusEffect target="Character" disabledeltatime="true" interval="1">
 				<Affliction identifier="nausea" strength="30" probability="0.1" />
       </StatusEffect>
     </Effect>
@@ -407,7 +408,7 @@
         <Conditional fleshaddiction="lt 20" />
         <ReduceAffliction identifier="fleshwithdrawal" strength="0.1" />
       </StatusEffect>
-			<StatusEffect target="Character">
+			<StatusEffect target="Character" disabledeltatime="true" interval="1">
 				<Affliction identifier="nausea" strength="30" probability="0.3" />
       </StatusEffect>
     </Effect>
@@ -417,7 +418,7 @@
         <Conditional fleshaddiction="lt 20" />
         <ReduceAffliction identifier="fleshwithdrawal" strength="0.05" />
       </StatusEffect>
-			<StatusEffect target="Character">
+			<StatusEffect target="Character" disabledeltatime="true" interval="1">
 				<Affliction identifier="nausea" strength="30" probability="0.5" />
       </StatusEffect>
     </Effect>
