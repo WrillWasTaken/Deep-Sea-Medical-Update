@@ -24,23 +24,49 @@
       textidentifier="afflictiondescription.opiateaddiction"
       target="OtherCharacter" />
 
-    <Effect minstrength="0" maxstrength="20" strengthchange="-0.05"/>
+    <Effect
+		 minstrength="0" 
+		 maxstrength="20" 
+		 strengthchange="-0.05"/>
       <!-- Slow down the character and slightly decrease vitality -->
-      <Effect minstrength="20" maxstrength="40" minvitalitydecrease="0" maxvitalitydecrease="20" strengthchange="-0.05" minchromaticaberration="0.0" maxchromaticaberration="1.0" dialogflag="OpiateWithdrawalLow">
+      <Effect 
+			minstrength="20" 
+			maxstrength="40" 
+			minvitalitydecrease="0" 
+			maxvitalitydecrease="20" 
+			strengthchange="-0.05" 
+			minchromaticaberration="0.0" 
+			maxchromaticaberration="1.0" 
+			dialogflag="OpiateWithdrawalLow">
+
         <StatusEffect target="Character" SpeedMultiplier="0.8" setvalue="true" />
+				<StatusEffect target="Character">
+					<Affliction identifier="nausea" strength="30" probability="0.1" />
+        </StatusEffect>
         <StatusEffect target="Character">
-          <ReduceAffliction identifier="opiateaddiction" strength="0.1" />
+					<Affliction identifier="nausea" strength="30" probability="0.1" />
         </StatusEffect>
         <StatusEffect target="Character">
           <Conditional opiateaddiction="lt 20" />
           <ReduceAffliction identifier="opiatewithdrawal" strength="0.1" />
         </StatusEffect>
-        <Affliction identifier="nausea" strength="30" probability="0.1" />
       </Effect>
       <!-- Decrease vitality more. The strength of the affliction drops faster, meaning that
       the character needs a stronger opiate addiction for the withdrawal symptoms to stay at this level -->
-      <Effect minstrength="40" maxstrength="80" minvitalitydecrease="20" maxvitalitydecrease="50" strengthchange="-0.1" minchromaticaberration="1.0" maxchromaticaberration="5.0" dialogflag="OpiateWithdrawalMedium">
+      <Effect 
+			minstrength="40"
+			maxstrength="80" 
+			minvitalitydecrease="20" 
+			maxvitalitydecrease="50" 
+			strengthchange="-0.1"
+			minchromaticaberration="1.0" 
+			maxchromaticaberration="5.0" 
+			dialogflag="OpiateWithdrawalMedium">
+
         <StatusEffect target="Character" SpeedMultiplier="0.7" setvalue="true" />
+				<StatusEffect target="Character">
+					<Affliction identifier="nausea" strength="30" probability="0.1" />
+        </StatusEffect>
         <StatusEffect target="Character">
           <ReduceAffliction identifier="opiateaddiction" strength="0.05" />
         </StatusEffect>
@@ -50,14 +76,31 @@
         </StatusEffect>
         <Affliction identifier="nausea" strength="30" probability="0.3" />
       </Effect>
+
       <!-- Withdrawal symptoms start to get lethal at this level -->
-      <Effect minstrength="80" maxstrength="100" minvitalitydecrease="50" maxvitalitydecrease="200" minscreendistort="0.0" maxscreendistort="3.0" strengthchange="-0.2" minchromaticaberration="5.0" maxchromaticaberration="10.0" minradialdistort="0.0" maxradialdistort="10.0" dialogflag="OpiateWithdrawalHigh">
+      <Effect 
+			minstrength="80" 
+			maxstrength="100" 
+			minvitalitydecrease="50" 
+			maxvitalitydecrease="200" 
+			minscreendistort="0.0" 
+			maxscreendistort="3.0" 
+			strengthchange="-0.2" 
+			minchromaticaberration="5.0" 
+			maxchromaticaberration="10.0" 
+			minradialdistort="0.0" 
+			maxradialdistort="10.0" 
+			dialogflag="OpiateWithdrawalHigh">
+
         <StatusEffect target="Character" SpeedMultiplier="0.5" color="195,136,60,255" setvalue="true" />
+				<StatusEffect target="Character">
+					<Affliction identifier="nausea" strength="30" probability="0.1" />
+        </StatusEffect>
         <StatusEffect target="Character">
           <Conditional opiateaddiction="lt 20" />
           <ReduceAffliction identifier="opiatewithdrawal" strength="0.05" />
         </StatusEffect>
-        <Affliction identifier="nausea" strength="30" probability="0.5" />
+
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,768,128,128" color="209,121,84,255" origin="0,0" />
     </Affliction>
