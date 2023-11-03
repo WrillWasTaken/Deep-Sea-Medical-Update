@@ -293,7 +293,7 @@
         <Remove />
       </StatusEffect>
       <!-- Addiction implant -->
-      <StatusEffect tags="medical" type="OnUse" target="Limb" duration="1.0">
+      <StatusEffect tags="medical" type="OnUse" target="UseTarget" duration="1.0">
         <RequiredItem identifier="batterycell" type="Contained" mincondition="100.0" />
         <RequiredItem items="addictionimplant" type="Contained" />
         <Sound file="Content/Items/Medical/Syringe.ogg" range="400" />
@@ -313,7 +313,7 @@
         <RequiredItem items="addictionimplant" type="Contained" />
         <Remove />
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnUse" target="Limb" duration="1.0">
+      <StatusEffect tags="medical" type="OnUse" target="UseTarget" duration="1.0">
         <RequiredItem identifier="fulguriumbatterycell" type="Contained" mincondition="50.0" />
         <RequiredItem items="addictionimplant" type="Contained" />
         <Sound file="Content/Items/Medical/Syringe.ogg" range="400" />
@@ -511,7 +511,7 @@
   </Item>
   <!-- implants, able to be inserted into incision or autosurgeon'ed -->
   <!-- allow surgery anywhere -->
-  <Item name="" identifier="surgeryimplant" category="Medical" maxstacksize="4" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,syringe" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+  <Item name="" identifier="surgeryimplant" category="Medical" maxstacksize="4" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,syringe,surgeonprogram" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
     <PreferredContainer primary="medcab" minamount="1" maxamount="2" />
     <PreferredContainer primary="wreckmedcab" minamount="0" maxamount="2" spawnprobability="0.6" />
@@ -558,7 +558,7 @@
     </Holdable>
   </Item>
   <!-- one-time all addiction gone -->
-  <Item name="" identifier="addictionimplant" category="Medical" maxstacksize="4" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,syringe" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+  <Item name="" identifier="addictionimplant" category="Medical" maxstacksize="4" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,syringe,surgeonprogram" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
     <PreferredContainer primary="medcab" minamount="0" maxamount="2" spawnprobability="0.7" />
     <PreferredContainer primary="wreckmedcab" minamount="0" maxamount="3" spawnprobability="0.6" />
