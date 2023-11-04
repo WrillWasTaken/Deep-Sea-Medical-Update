@@ -206,139 +206,61 @@
     <InventoryIcon texture="new_tools.png" sourcerect="256,0,64,64" origin="0.5,0.5" />
     <Sprite texture="new_tools.png" sourcerect="265,6,45,53" depth="0.6" origin="0.5,0.5" />
     <Body width="28" height="15" density="400" />
-    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
-      <!--<Conditional condition="gte 100" />-->
+    <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
+			<RequiredItem items="mobilebattery" type="Contained" TargetSlot="0" />
+
       <!-- Bullet removal; works fine -->
       <StatusEffect tags="medical" type="OnUse" target="Limb" duration="1.0">
-        <RequiredItem identifier="batterycell" type="Contained" mincondition="100.0" />
         <RequiredItem identifier="surgeonprogrambullet" type="Contained" />
         <Sound file="Content/Items/Medical/Syringe.ogg" range="400" />
         <ReduceAffliction identifier="gunshotwound" amount="20" />
-      </StatusEffect>
-      <StatusEffect tags="medical" type="OnUse" targettype="Contained" targets="batterycell" Condition="-100.0">
-        <RequiredItem identifier="batterycell" type="Contained" mincondition="100.0" />
-        <RequiredItem identifier="surgeonprogrambullet" type="Contained" />
-      </StatusEffect>
-      <StatusEffect tags="medical" type="OnUse" target="Limb" duration="1.0">
-        <RequiredItem identifier="fulguriumbatterycell" type="Contained" mincondition="50.0" />
-        <RequiredItem identifier="surgeonprogrambullet" type="Contained" />
-        <Sound file="Content/Items/Medical/Syringe.ogg" range="400" />
-        <ReduceAffliction identifier="gunshotwound" amount="20" />
-      </StatusEffect>
-      <StatusEffect tags="medical" type="OnUse" targettype="Contained" targets="fulguriumbatterycell" Condition="-50.0">
-        <RequiredItem identifier="fulguriumbatterycell" type="Contained" mincondition="50.0" />
-        <RequiredItem identifier="surgeonprogrambullet" type="Contained" />
-      </StatusEffect>
-      <!-- Organ removal; works fine -->
+			</StatusEffect>
+
+				<!-- Organ removal; works fine -->
       <StatusEffect tags="medical" type="OnUse" target="Limb">
-        <RequiredItem identifier="batterycell" type="Contained" mincondition="100.0" />
-        <RequiredItem items="surgeonprogramorgan" type="Contained" />
-        <Conditional organdamage="lte 3" />
+        <RequiredItem identifier="surgeonprogramorgan" type="Contained" />
+        <Conditional organdamage="lt 1" />
         <SpawnItem identifier="humanorgan" spawnposition="This" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnUse" target="Limb" duration="1.0">
-        <RequiredItem identifier="batterycell" type="Contained" mincondition="100.0" />
         <RequiredItem identifier="surgeonprogramorgan" type="Contained" />
         <Sound file="Content/Items/Medical/Syringe.ogg" range="400" />
         <Affliction identifier="missingorgan" amount="9" />
         <ReduceAffliction identifier="organdamage" amount="20" />
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnUse" targettype="Contained" targets="batterycell" Condition="-100.0">
-        <RequiredItem identifier="surgeonprogramorgan" type="Contained" />
-      </StatusEffect>
-      <StatusEffect tags="medical" type="OnUse" target="Limb">
-        <RequiredItem identifier="fulguriumbatterycell" type="Contained" mincondition="50.0" />
-        <RequiredItem items="surgeonprogramorgan" type="Contained" />
-        <Conditional organdamage="lte 3" />
-        <SpawnItem identifier="humanorgan" spawnposition="This" />
-      </StatusEffect>
-      <StatusEffect tags="medical" type="OnUse" target="Limb" duration="1.0">
-        <RequiredItem identifier="fulguriumbatterycell" type="Contained" mincondition="50.0" />
-        <RequiredItem identifier="surgeonprogramorgan" type="Contained" />
-        <Sound file="Content/Items/Medical/Syringe.ogg" range="400" />
-        <Affliction identifier="missingorgan" amount="9" />
-        <ReduceAffliction identifier="organdamage" amount="20" />
-      </StatusEffect>
-      <StatusEffect tags="medical" type="OnUse" targettype="Contained" targets="fulguriumbatterycell" Condition="-50.0">
-        <RequiredItem identifier="surgeonprogramorgan" type="Contained" />
-      </StatusEffect>
+
       <!-- Implants; fixed after so many hours of work-->
       <!-- Surgery implant -->
       <StatusEffect tags="medical" type="OnUse" target="Limb" duration="1.0">
-        <RequiredItem identifier="batterycell" type="Contained" mincondition="100.0" />
-        <RequiredItem items="surgeryimplant" type="Contained" />
+        <RequiredItem identifier="surgeryimplant" type="Contained" />
         <Sound file="Content/Items/Medical/Syringe.ogg" range="400" />
         <Affliction identifier="surgeryreadyimplant" amount="10" />
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnUse" targettype="Contained" targets="batterycell" Condition="-100.0">
-        <RequiredItem identifier="surgeryimplant" type="Contained" />
-      </StatusEffect>
-      <StatusEffect tags="medical" type="OnUse" targettype="Contained" targets="surgeryimplant">
-        <!--<RequiredItem identifier="batterycell" type="Contained" mincondition="100.0"/>-->
-        <RequiredItem items="surgeryimplant" type="Contained" />
-        <Remove />
-      </StatusEffect>
-      <StatusEffect tags="medical" type="OnUse" target="Limb" duration="1.0">
-        <RequiredItem identifier="fulguriumbatterycell" type="Contained" mincondition="50.0" />
-        <RequiredItem items="surgeryimplant" type="Contained" />
-        <Sound file="Content/Items/Medical/Syringe.ogg" range="400" />
-        <Affliction identifier="surgeryreadyimplant" amount="10" />
-      </StatusEffect>
-      <StatusEffect tags="medical" type="OnUse" targettype="Contained" targets="fulguriumbatterycell" Condition="-50.0">
-        <RequiredItem identifier="surgeryimplant" type="Contained" />
-      </StatusEffect>
-      <StatusEffect tags="medical" type="OnUse" targettype="Contained" targets="surgeryimplant">
-        <!--<RequiredItem identifier="fulguriumbatterycell" type="Contained" mincondition="50.0"/>-->
-        <RequiredItem items="surgeryimplant" type="Contained" />
-        <Remove />
-      </StatusEffect>
+
       <!-- Addiction implant -->
-      <StatusEffect tags="medical" type="OnUse" target="UseTarget" duration="1.0">
-        <RequiredItem identifier="batterycell" type="Contained" mincondition="100.0" />
-        <RequiredItem items="addictionimplant" type="Contained" />
-        <Sound file="Content/Items/Medical/Syringe.ogg" range="400" />
-        <ReduceAffliction identifier="opiateaddiction" amount="100" />
-        <ReduceAffliction identifier="methaddiction" amount="100" />
-        <ReduceAffliction identifier="steroidaddiction" amount="100" />
-        <ReduceAffliction identifier="alcoholaddiction" amount="100" />
-        <ReduceAffliction identifier="opiatewithdrawal" amount="100" />
-        <ReduceAffliction identifier="methwithdrawal" amount="100" />
-        <ReduceAffliction identifier="steroidwithdrawal" amount="100" />
-        <ReduceAffliction identifier="alcoholwithdrawal" amount="100" />
-      </StatusEffect>
-      <StatusEffect tags="medical" type="OnUse" targettype="Contained" targets="batterycell" Condition="-100.0">
+      <StatusEffect tags="medical" type="OnUse" target="UseTarget" duration="1.0" ConditionalComparison="And">
+        <RequiredItem identifier="mobilebattery" type="Contained" TargetSlot="0" />
         <RequiredItem identifier="addictionimplant" type="Contained" />
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="400" />
+        <ReduceAffliction type="addiction" amount="250" />
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnUse" targettype="Contained" targets="addictionimplant">
-        <RequiredItem items="addictionimplant" type="Contained" />
+			
+			<!--remove one-time-use programs and such-->
+      <StatusEffect tags="medical" type="OnUse" target="Contained" TargetSlot="1">
+        <RequiredItem items="surgeonprogramconsumable" type="Contained" />
         <Remove />
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnUse" target="UseTarget" duration="1.0">
-        <RequiredItem identifier="fulguriumbatterycell" type="Contained" mincondition="50.0" />
-        <RequiredItem items="addictionimplant" type="Contained" />
-        <Sound file="Content/Items/Medical/Syringe.ogg" range="400" />
-        <ReduceAffliction identifier="opiateaddiction" amount="100" />
-        <ReduceAffliction identifier="methaddiction" amount="100" />
-        <ReduceAffliction identifier="steroidaddiction" amount="100" />
-        <ReduceAffliction identifier="alcoholaddiction" amount="100" />
-        <ReduceAffliction identifier="opiatewithdrawal" amount="100" />
-        <ReduceAffliction identifier="methwithdrawal" amount="100" />
-        <ReduceAffliction identifier="steroidwithdrawal" amount="100" />
-        <ReduceAffliction identifier="alcoholwithdrawal" amount="100" />
-      </StatusEffect>
-      <StatusEffect tags="medical" type="OnUse" targettype="Contained" targets="fulguriumbatterycell" Condition="-50.0">
-        <RequiredItem identifier="addictionimplant" type="Contained" />
-      </StatusEffect>
-      <StatusEffect tags="medical" type="OnUse" targettype="Contained" targets="addictionimplant">
-        <RequiredItem items="addictionimplant" type="Contained" />
-        <Remove />
-      </StatusEffect>
+
+			<StatusEffect type="OnUse" target="Contained" Condition="-100" disabledeltatime="True" TargetSlot="0">
+				<RequiredItem items="surgeonprogram" type="Contained" msg="ItemMsgSurgeonProgramRequired" />
+			</StatusEffect>
+
     </MeleeWeapon>
 		<ItemContainer capacity="1" maxstacksize="1" slotsperrow="2" containedstateindicatorstyle="battery" containedstateindicatorslot="0">
       <Containable items="mobilebattery" />
       <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
       <SubContainer capacity="1" maxstacksize="1">
-        <Containable items="surgeonprogram" hide="true" />
+        <Containable items="surgeonprogram"	/>
       </SubContainer>
 		</ItemContainer>
   </Item>
@@ -511,7 +433,7 @@
   </Item>
   <!-- implants, able to be inserted into incision or autosurgeon'ed -->
   <!-- allow surgery anywhere -->
-  <Item name="" identifier="surgeryimplant" category="Medical" maxstacksize="4" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,syringe,surgeonprogram" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+  <Item name="" identifier="surgeryimplant" category="Medical" maxstacksize="4" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,syringe,surgeonprogram,surgeonprogramconsumable" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
     <PreferredContainer primary="medcab" minamount="1" maxamount="2" />
     <PreferredContainer primary="wreckmedcab" minamount="0" maxamount="2" spawnprobability="0.6" />
@@ -558,7 +480,7 @@
     </Holdable>
   </Item>
   <!-- one-time all addiction gone -->
-  <Item name="" identifier="addictionimplant" category="Medical" maxstacksize="4" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,syringe,surgeonprogram" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+  <Item name="" identifier="addictionimplant" category="Medical" maxstacksize="4" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,syringe,surgeonprogram,surgeonprogramconsumable" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
     <PreferredContainer primary="medcab" minamount="0" maxamount="2" spawnprobability="0.7" />
     <PreferredContainer primary="wreckmedcab" minamount="0" maxamount="3" spawnprobability="0.6" />
