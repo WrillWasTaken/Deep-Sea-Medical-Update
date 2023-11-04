@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Override>
-  <Items>
-    <!-- Overrided to include ether tank -->
+	<Items>
+		<!-- Overrided to include ether tank -->
 		<Item name="" identifier="divingmask" scale="0.5" category="Diving,Equipment" Tags="smallitem,diving,lightdiving" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light">
 			<Price baseprice="100">
 				<Price storeidentifier="merchantoutpost" multiplier="0.9" minavailable="5" />
@@ -32,10 +32,10 @@
 				<sprite name="Diving Mask Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.7" hidelimb="false" hideotherwearables="false" sourcerect="226,326,69,68" origin="0.4,0.3" hidewearablesoftype="moustache,beard" />
 				<StatusEffect type="OnWearing" target="Character" HideFace="true" setvalue="true" disabledeltatime="true" />
 				<StatusEffect type="OnWearing" target="Contained,Character"	Condition="-0.5" comparison="Or">
-          <Conditional IsDead="false" />
-          <RequiredItem items="ethertank" type="Contained" />
-          <Affliction identifier="anesthesia" amount="0.5" />
-        </StatusEffect>	
+					<Conditional IsDead="false" />
+					<RequiredItem items="ethertank" type="Contained" />
+					<Affliction identifier="anesthesia" amount="0.5" />
+				</StatusEffect>	
 				<StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.5" comparison="Or">
 					<Conditional IsDead="false" />
 					<RequiredItem items="oxygensource" type="Contained" />
@@ -59,33 +59,33 @@
 				</Containable>
 			</ItemContainer>
 		</Item>
-    <!-- Gives affliction that lets surgical tools know when on the bed. -->
-    <Item name="" identifier="opdeco_hospitalbed" width="416" height="192" texturescale="1.0,1.0" scale="0.5" noninteractable="false" category="Decorative">
-      <Upgrade gameversion="0.12.0.0" noninteractable="false" />
-      <sprite texture="Content/Map/Outposts/Art/MedBayAssets.png" sourcerect="96,304,416,192" depth="0.97" premultiplyalpha="false" origin="0.5,0.5" />
-      <Controller UserPos="0,-300" direction="Right" hidehud="false" canbeselected="true">
-        <limbposition limb="Head" position="-6,-10" />
-        <limbposition limb="Torso" position="104,0" />
-        <limbposition limb="Waist" position="244,-80" />
-        <limbposition limb="RightFoot" position="380,-20" />
-        <limbposition limb="LeftFoot" position="380,-20" />
-        <limbposition limb="RightHand" position="234,-10" allowusinglimb="false" />
-        <limbposition limb="LeftHand" position="234,-10" allowusinglimb="false" />
-        <StatusEffect type="OnActive" target="Character">
-          <reduceaffliction type="damage" strength="0.05" />
-          <reduceaffliction identifier="bloodloss" strength="0.05" />
-          <reduceaffliction identifier="bleeding" strength="0.05" />
-          <reduceaffliction identifier="nausea" strength="0.05" />
-          <reduceaffliction identifier="opiatewithdrawal" strength="0.05" />
-          <reduceaffliction identifier="opiateaddiction" strength="0.05" />
-          <reduceaffliction identifier="drunk" strength="0.05" />
-          <Affliction identifier="surgeryready" strength="1" />
+		<!-- Gives affliction that lets surgical tools know when on the bed. -->
+		<Item name="" identifier="opdeco_hospitalbed" width="416" height="192" texturescale="1.0,1.0" scale="0.5" noninteractable="false" category="Decorative">
+			<Upgrade gameversion="0.12.0.0" noninteractable="false" />
+			<sprite texture="Content/Map/Outposts/Art/MedBayAssets.png" sourcerect="96,304,416,192" depth="0.97" premultiplyalpha="false" origin="0.5,0.5" />
+			<Controller UserPos="0,-300" direction="Right" hidehud="false" canbeselected="true">
+				<limbposition limb="Head" position="-6,-10" />
+				<limbposition limb="Torso" position="104,0" />
+				<limbposition limb="Waist" position="244,-80" />
+				<limbposition limb="RightFoot" position="380,-20" />
+				<limbposition limb="LeftFoot" position="380,-20" />
+				<limbposition limb="RightHand" position="234,-10" allowusinglimb="false" />
+				<limbposition limb="LeftHand" position="234,-10" allowusinglimb="false" />
+				<StatusEffect type="OnActive" target="Character">
+					<reduceaffliction type="damage" strength="0.05" />
+					<reduceaffliction identifier="bloodloss" strength="0.05" />
+					<reduceaffliction identifier="bleeding" strength="0.05" />
+					<reduceaffliction identifier="nausea" strength="0.05" />
+					<reduceaffliction identifier="opiatewithdrawal" strength="0.05" />
+					<reduceaffliction identifier="opiateaddiction" strength="0.05" />
+					<reduceaffliction identifier="drunk" strength="0.05" />
+					<Affliction identifier="surgeryready" strength="1" />
 					<StatusEffect type="Always" target="NearbyCharacters" range="250">
 						<Conditional Vitality="lte 0" />
 						<Affliction identifier="surgeryreadycrit" strength="1"/>
 					</StatusEffect>
-        </StatusEffect>
-      </Controller>
-    </Item>
-  </Items>
+				</StatusEffect>
+			</Controller>
+		</Item>
+	</Items>
 </Override>
