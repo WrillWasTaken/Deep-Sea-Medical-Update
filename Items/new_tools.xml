@@ -165,22 +165,14 @@
 			<StatusEffect type="OnUse" target="Limb, This" Condition="-5.0" disabledeltatime="true" comparison="And">
 				<Conditional surgeryready="gte 1" />
 				<Conditional incision="gte 1" />
+				<Sound file="Content/Items/Medical/Syringe.ogg" range="400" />
+				<ReduceAffliction identifier="gunshotwound" amount="15" />
 			</StatusEffect>
-			<StatusEffect type="OnFailure" target="Limb, This" Condition="-8.0" disabledeltatime="true" comparison="And">
-				<Conditional surgeryready="gte 1" />
-				<Conditional incision="gte 1" />
-			</StatusEffect>
-			<StatusEffect tags="medical" type="OnSuccess" target="Limb" duration="1.0" comparison="And">
+			<StatusEffect type="OnFailure" target="Limb, This" Condition="-10" disabledeltatime="true" comparison="And">
 				<Conditional surgeryready="gte 1" />
 				<Conditional incision="gte 1" />
 				<Sound file="Content/Items/Medical/Syringe.ogg" range="400" />
-				<ReduceAffliction identifier="gunshotwound" amount="5" />
-			</StatusEffect>
-			<StatusEffect tags="medical" type="OnFailure" target="Limb" duration="2.0" comparison="And">
-				<Conditional surgeryready="gte 1" />
-				<Conditional incision="gte 1" />
-				<Sound file="Content/Items/Medical/Syringe.ogg" range="400" />
-				<ReduceAffliction identifier="gunshotwound" amount="2.5" />
+				<ReduceAffliction identifier="gunshotwound" amount="10" />
 			</StatusEffect>
 			<!-- Remove the item when fully used -->
 			<StatusEffect type="OnBroken" target="This">
