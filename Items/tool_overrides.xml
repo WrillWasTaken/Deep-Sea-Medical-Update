@@ -34,7 +34,7 @@
 				<StatusEffect type="OnWearing" target="Contained,Character"	Condition="-0.5" comparison="Or">
 					<Conditional IsDead="false" />
 					<RequiredItem items="ethertank" type="Contained" />
-					<Affliction identifier="anesthesia" amount="0.5" />
+					<Affliction identifier="anesthesia" amount="2" />
 				</StatusEffect>	
 				<StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.5" comparison="Or">
 					<Conditional IsDead="false" />
