@@ -323,7 +323,7 @@
 				<Conditional incision="gte 1" />
 				<Sound file="Content/Items/Medical/Syringe.ogg" range="400" />
 				<Affliction identifier="missingorgan" amount="10" />
-				<Affliction identifier="organdamage" amount="-20" />
+				<Affliction identifier="organdamage" amount="-40" />
 			</StatusEffect>
 			<StatusEffect tags="medical" type="OnFailure" target="Limb" disabledeltatime="true" comparison="And" delay="0.05">
 				<Conditional surgeryready="gte 1" />
