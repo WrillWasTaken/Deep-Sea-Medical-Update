@@ -375,21 +375,21 @@
 				<RequiredSkill identifier="medical" level="10" />
 				<StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
 				<StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
-				<StatusEffect tags="medical" type="OnSuccess" target="This, Limb" duration="24.0">
+				<StatusEffect tags="medical" type="OnSuccess" target="This, Limb" duration="20.0">
 					<Sound file="Content/Items/Medical/Bandage1.ogg" type="OnUse" range="500" />
 					<Sound file="Content/Items/Medical/Bandage2.ogg" type="OnUse" range="500" />
+					<ReduceAffliction identifier="bleeding" amount="2" />
+					<ReduceAffliction identifier="lacerations" amount="1.5" />
+					<ReduceAffliction identifier="bitewounds" amount="1.5" />
+					<ReduceAffliction type="burn" amount="1.5" />
+				</StatusEffect>
+				<StatusEffect tags="medical" type="OnFailure" target="Limb, This" duration="20.0">
+					<Sound file="Content/Items/Medical/Bandage2.ogg" type="OnUse" range="500" />
+					<Sound file="Content/Items/Medical/Bandage1.ogg" type="OnUse" range="500" />
 					<ReduceAffliction identifier="bleeding" amount="1" />
 					<ReduceAffliction identifier="lacerations" amount="0.75" />
 					<ReduceAffliction identifier="bitewounds" amount="0.75" />
-					<ReduceAffliction type="burn" amount="0.75" />
-				</StatusEffect>
-				<StatusEffect tags="medical" type="OnFailure" target="Limb, This" duration="24.0">
-					<Sound file="Content/Items/Medical/Bandage2.ogg" type="OnUse" range="500" />
-					<Sound file="Content/Items/Medical/Bandage1.ogg" type="OnUse" range="500" />
-					<ReduceAffliction identifier="bleeding" amount="0.75" />
-					<ReduceAffliction identifier="lacerations" amount="0.5" />
-					<ReduceAffliction identifier="bitewounds" amount="0.5" />
-					<ReduceAffliction type="burn" amount="0.5" />
+					<ReduceAffliction type="burn" amount="1" />
 				</StatusEffect>
 				<!-- Remove the item when fully used -->
 				<StatusEffect type="OnBroken" target="This">
