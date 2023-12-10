@@ -1046,7 +1046,7 @@
 					<ReduceAffliction identifier="oxygenlow" amount="0.1" />
 					<ReduceAffliction identifier="stun" amount="0.25" />
 					<Affliction identifier="psychosis" amount="0.8" />
-					<Affliction type="burn" amount="0.125" />
+					<Affliction identifier="burn" amount="0.125" />
 				</StatusEffect>
 				<StatusEffect tags="medical" type="OnImpact" target="UseTarget" disabledeltatime="true">
 					<Affliction identifier="haste" amount="400" />
