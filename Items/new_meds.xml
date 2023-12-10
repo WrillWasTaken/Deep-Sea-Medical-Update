@@ -284,7 +284,7 @@
 			<StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
 			<StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
 			<RequiredSkill identifier="medical" level="15" />
-			<StatusEffect tags="medical" type="OnSuccess" target="UseTarget" duration="10">
+			<StatusEffect tags="medical" type="OnSuccess" target="UseTarget" duration="12">
 				<Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
 				<ReduceAffliction identifier="blunttrauma" amount="5" />
 				<ReduceAffliction identifier="explosiondamage" amount="5" />
