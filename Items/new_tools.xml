@@ -199,11 +199,11 @@
 		<Sprite texture="new_tools.png" sourcerect="265,6,45,53" depth="0.6" origin="0.5,0.5" />
 		<Body width="28" height="15" density="400" />
 		<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
-			<RequiredItem items="mobilebattery" type="Contained" TargetSlot="0" />
 
 			<!-- Bullet removal; works fine -->
 			<StatusEffect tags="medical" type="OnUse" target="Limb" duration="1.0">
 				<RequiredItem identifier="surgeonprogrambullet" type="Contained" />
+				<RequiredItem items="mobilebattery" type="Contained" TargetSlot="0" />
 				<Sound file="Content/Items/Medical/Syringe.ogg" range="400" />
 				<ReduceAffliction identifier="gunshotwound" amount="20" />
 			</StatusEffect>
@@ -211,11 +211,13 @@
 				<!-- Organ removal; works fine -->
 			<StatusEffect tags="medical" type="OnUse" target="Limb">
 				<RequiredItem identifier="surgeonprogramorgan" type="Contained" />
+				<RequiredItem items="mobilebattery" type="Contained" TargetSlot="0" />
 				<Conditional organdamage="lt 1" />
 				<SpawnItem identifier="humanorgan" spawnposition="This" />
 			</StatusEffect>
 			<StatusEffect tags="medical" type="OnUse" target="Limb" duration="1.0">
 				<RequiredItem identifier="surgeonprogramorgan" type="Contained" />
+				<RequiredItem items="mobilebattery" type="Contained" TargetSlot="0" />
 				<Sound file="Content/Items/Medical/Syringe.ogg" range="400" />
 				<Affliction identifier="missingorgan" amount="9" />
 				<ReduceAffliction identifier="organdamage" amount="20" />
@@ -225,6 +227,7 @@
 			<!-- Surgery implant -->
 			<StatusEffect tags="medical" type="OnUse" target="Limb" duration="1.0">
 				<RequiredItem identifier="surgeryimplant" type="Contained" />
+				<RequiredItem items="mobilebattery" type="Contained" TargetSlot="0" />
 				<Sound file="Content/Items/Medical/Syringe.ogg" range="400" />
 				<Affliction identifier="surgeryreadyimplant" amount="10" />
 			</StatusEffect>
@@ -240,11 +243,13 @@
 			<!--remove one-time-use programs and such-->
 			<StatusEffect tags="medical" type="OnUse" target="Contained" TargetSlot="1">
 				<RequiredItem items="surgeonprogramconsumable" type="Contained" />
+				<RequiredItem items="mobilebattery" type="Contained" TargetSlot="0" />
 				<Remove />
 			</StatusEffect>
 
 			<StatusEffect type="OnUse" target="Contained" Condition="-100" disabledeltatime="True" TargetSlot="0">
 				<RequiredItem items="surgeonprogram" type="Contained" msg="ItemMsgSurgeonProgramRequired" />
+				<RequiredItem items="mobilebattery" type="Contained" TargetSlot="0" />
 			</StatusEffect>
 
 		</MeleeWeapon>
