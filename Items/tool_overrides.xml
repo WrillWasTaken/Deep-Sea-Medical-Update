@@ -80,10 +80,10 @@
 					<reduceaffliction identifier="opiateaddiction" strength="0.05" />
 					<reduceaffliction identifier="drunk" strength="0.05" />
 					<Affliction identifier="surgeryready" strength="1" />
-					<StatusEffect type="Always" target="NearbyCharacters" range="250">
-						<Conditional Vitality="lte 0" />
-						<Affliction identifier="surgeryreadycrit" strength="1"/>
-					</StatusEffect>
+				</StatusEffect>
+				<StatusEffect type="Always" target="NearbyCharacters" range="250">
+					<Conditional Vitality="lte 0" />
+					<Affliction identifier="surgeryreadycrit" strength="1"/>
 				</StatusEffect>
 			</Controller>
 		</Item>
