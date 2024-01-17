@@ -740,7 +740,7 @@
 	<!-- ~~~~~~~~~~~~~~ -->
 	<!-- DIY version of the hospital bed, craftable, buyable; no healing benefits like stationary one -->
 	<!-- possible problem width= + height=??-->
-	<Item name="" identifier="foldingsurgerytable" tags="mediumitem,operatingtable" texturescale="1.0,1.0" scale="0.5" noninteractable="false" category="Misc,Medical" impactsoundtag="impact_metal_heavy"> <!--operatingtable tag for compat reasons-->
+	<Item name="" identifier="foldingsurgerytable" tags="mediumitem,operatingtable" texturescale="1.0,1.0" scale="0.5" noninteractable="false" category="Misc,Medical,mediumitem" impactsoundtag="impact_metal_heavy"> <!--operatingtable tag for compat reasons-->
 		<sprite texture="new_tools.png" sourcerect="0,320,416,192" depth="0.97" premultiplyalpha="false" origin="0.5,0.5" />
 		<InventoryIcon texture="new_tools.png" sourcerect="256,128,64,64" origin="0.5,0.5" />
 		<Body width="416" height="192" density="60" />
@@ -777,6 +777,6 @@
 				<Affliction identifier="surgeryreadycrit" strength="1"/>
 			</StatusEffect>
 		</Controller>
-		<Holdable selectkey="Select" pickkey="Use" slots="RightHand+LeftHand" msg="ItemMsgFoldTableSelect" PickingTime="10.0" aimpos="35,15" holdpos="0,-80" handle1="-30,40" handle2="30,40" attachable="true" attachedbydefault="true" aimable="true"></Holdable>
+		<Holdable selectkey="Select" pickkey="Use" slots="RightHand,LeftHand" msg="ItemMsgFoldTableSelect" PickingTime="10.0" aimpos="20,-20" holdpos="10,-20" handle1="50,50" holdangle="-10" attachable="true" attachedbydefault="true" aimable="true"></Holdable>
 	</Item>
 </Items>
