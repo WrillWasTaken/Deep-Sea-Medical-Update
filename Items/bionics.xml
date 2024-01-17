@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
-	<Item name="" identifier="humanflesh" category="Medical" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft">
+	<Item name="" identifier="humanflesh" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft">
 		<Upgrade gameversion="0.10.0.0" scale="0.5" />
 		<PreferredContainer primary="wreckmedcab" minamount="0" maxamount="4" spawnprobability="0.65" />
 		<SuitableTreatment identifier="fleshwithdrawal" suitability="30" />

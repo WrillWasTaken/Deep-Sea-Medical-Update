@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
 	<!-- Ether tank: gives anesthized affliction, allows surgery when not on medical bed -->
-	<Item name="" identifier="ethertank" category="Equipment,Medical" maxstacksize="8" Tags="smallitem,ethertank,oxygensource" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" allowdroppingonswap="true">
+	<Item name="" identifier="ethertank" category="Equipment,Medical" health="200" maxstacksize="8" maxstacksizecharacterinventory="1" Tags="smallitem,ethertank,oxygensource" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" allowdroppingonswap="true">
 		<Upgrade gameversion="0.10.0.0" scale="0.5" />
 		<Price baseprice="90">
 			<Price locationtype="outpost" multiplier="1.2" minavailable="3" />
@@ -64,14 +64,6 @@
 		<Body width="45" height="15" density="50" />
 		<MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="0,5" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
 			<RequiredSkill identifier="medical" level="15"></RequiredSkill>
-			<StatusEffect type="OnUse" target="Limb, This" Condition="-5.0" disabledeltatime="true" comparison="And">
-				<Conditional surgeryready="gte 1" />
-				<!-- conditional detects on whole body for some reason ~
-				<Conditional incision="lte 0"/>-->
-			</StatusEffect>
-			<StatusEffect type="OnFailure" target="Limb, This" Condition="-8.0" disabledeltatime="true" comparison="And">
-				<Conditional surgeryready="gte 1" />
-			</StatusEffect>
 			<StatusEffect tags="medical" type="OnSuccess" target="Limb" disabledeltatime="true" comparison="And">
 				<Conditional surgeryready="gte 1" />
 				<!-- conditional detects on whole body for some reason ~
@@ -113,14 +105,6 @@
 		<Body width="65" height="35" density="20" />
 		<MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
 			<RequiredSkill identifier="medical" level="20"></RequiredSkill>
-			<StatusEffect type="OnUse" target="Limb, This" Condition="-10.0" disabledeltatime="true" comparison="And">
-				<Conditional surgeryready="gte 1" />
-				<!-- conditional detects on whole body for some reason ~
-				<Conditional incision="gte 1"/>-->
-			</StatusEffect>
-			<StatusEffect type="OnFailure" target="Limb, This" Condition="-8.0" disabledeltatime="true" comparison="And">
-				<Conditional surgeryready="gte 1" />
-			</StatusEffect>
 			<StatusEffect tags="medical" type="OnSuccess" target="Limb" disabledeltatime="true" comparison="And">
 				<Conditional surgeryready="gte 1" />
 				<!-- conditional detects on whole body for some reason ~
@@ -162,13 +146,13 @@
 		<Body width="80" height="15" density="20" />
 		<MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="0,5" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
 			<RequiredSkill identifier="medical" level="20"></RequiredSkill>
-			<StatusEffect type="OnUse" target="Limb, This" Condition="-5.0" disabledeltatime="true" comparison="And">
+			<StatusEffect type="OnUse" target="Limb" disabledeltatime="true" comparison="And">
 				<Conditional surgeryready="gte 1" />
 				<Conditional incision="gte 1" />
 				<Sound file="Content/Items/Medical/Syringe.ogg" range="400" />
 				<ReduceAffliction identifier="gunshotwound" amount="15" />
 			</StatusEffect>
-			<StatusEffect type="OnFailure" target="Limb, This" Condition="-10" disabledeltatime="true" comparison="And">
+			<StatusEffect type="OnFailure" target="Limb" disabledeltatime="true" comparison="And">
 				<Conditional surgeryready="gte 1" />
 				<Conditional incision="gte 1" />
 				<Sound file="Content/Items/Medical/Syringe.ogg" range="400" />
@@ -309,14 +293,6 @@
 		<Body width="80" height="35" density="20" />
 		<MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="0,5" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
 			<RequiredSkill identifier="medical" level="30"></RequiredSkill>
-			<StatusEffect type="OnUse" target="Limb, This" Condition="-5.0" disabledeltatime="true" comparison="And">
-				<Conditional surgeryready="gte 1" />
-				<Conditional incision="gte 1" />
-			</StatusEffect>
-			<StatusEffect type="OnFailure" target="Limb, This" Condition="-8.0" disabledeltatime="true" comparison="And">
-				<Conditional surgeryready="gte 1" />
-				<Conditional incision="gte 1" />
-			</StatusEffect>
 			<StatusEffect type="OnUse" target="UseTarget" disabledeltatime="true" comparison="And">
 				<Conditional surgeryready="gte 1" />
 				<Conditional incision="gte 1" />
