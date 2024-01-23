@@ -73,6 +73,60 @@
 		<icon texture="%ModDir%/Afflictions/new_afflictions.png" sourcerect="256,0,128,128" color="70,199,66,255" origin="0,0" />
 	</Affliction>
 
+	<Affliction name="bullet movement damage low" identifier="gunshotdamage_low" type="wounddamage" limbspecific="true" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="2">
+		<PeriodicEffect mininterval="1" maxinterval="15">
+      <StatusEffect target="Character">
+				<Conditional CurrentSpeed="gte 2.7"/>
+        <Affliction identifier="explosiondamage" amount="0.5"/>
+      </StatusEffect>
+    </PeriodicEffect>
+		<Effect minstrength="0" maxstrength="2" strengthchange="-10"/>
+		<!-- no need for sprite, not ever seen -->
+		<icon texture="Content/UI/MainIconsAtlas.png" sourcerect="640,640,128,128" color="0,255,0,255" origin="0,0" />
+	</Affliction>
+
+	<Affliction name="bullet movement damage medium" identifier="gunshotdamage_medium" type="wounddamage" limbspecific="true" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="2">
+		<PeriodicEffect mininterval="1" maxinterval="15">
+      <StatusEffect target="Character">
+				<Conditional CurrentSpeed="gte 2.7"/>
+        <Affliction identifier="explosiondamage" amount="1"/>
+      </StatusEffect>
+    </PeriodicEffect>
+		<Effect minstrength="0" maxstrength="2" strengthchange="-10"/>
+		<!-- no need for sprite, not ever seen -->
+		<icon texture="Content/UI/MainIconsAtlas.png" sourcerect="640,640,128,128" color="0,255,0,255" origin="0,0" />
+	</Affliction>
+
+	<Affliction name="bullet movement damage high" identifier="gunshotdamage_high" type="wounddamage" limbspecific="true" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="2">
+		<PeriodicEffect mininterval="1" maxinterval="15">
+      <StatusEffect target="Character">
+				<Conditional CurrentSpeed="gte 2.7"/>
+        <Affliction identifier="explosiondamage" amount="1.5"/>
+      </StatusEffect>
+    </PeriodicEffect>
+		<Effect minstrength="0" maxstrength="2" strengthchange="-10"/>
+		<!-- no need for sprite, not ever seen -->
+		<icon texture="Content/UI/MainIconsAtlas.png" sourcerect="640,640,128,128" color="0,255,0,255" origin="0,0" />
+	</Affliction>
+
+	<Affliction name="debug healing" identifier="debughealing" type="debug" limbspecific="false" indicatorlimb="Torso" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="120">
+		<Effect minstrength="0" maxstrength="120" strengthchange="-1">
+			<StatusEffect target="Character">
+				<ReduceAffliction type="damage" amount="2" />
+				<ReduceAffliction type="organdamage" amount="2" />
+				<ReduceAffliction type="burn" amount="2" />
+				<ReduceAffliction type="bloodloss" amount="2" />
+				<ReduceAffliction type="bleeding" amount="2.5" />
+			</StatusEffect>
+			<StatusEffect target="Character" setvalue="true">
+				<Conditional healthpercentage="eq 100" />
+				<Affliction identifier="debughealing" strength="0" />
+			</StatusEffect>
+		</Effect>
+		<!-- no need for sprite, not ever seen -->
+		<icon texture="Content/UI/MainIconsAtlas.png" sourcerect="640,640,128,128" color="0,255,0,255" origin="0,0" />
+	</Affliction>
+
 	<!--=========================================================-->
 	<!--METH ADDICTION AFFLICTIONS-->
 	<!--=========================================================-->
