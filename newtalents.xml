@@ -1,0 +1,11 @@
+<Talents>
+  <Talent identifier="mechanicalmastermind">
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="6,6" sheetelementsize="128,128"/>
+    <Description tag="talentdescription.unlockrecipe">
+      <Replace tag="[itemname]" value="entityname.adrenalinebionic,entityname.methbionic,entityname.calyxanidebionic" color="gui.orange"/>
+    </Description>
+    <AddedRecipe itemidentifier="adrenalinebionic"/>
+    <AddedRecipe itemidentifier="methbionic"/>
+    <AddedRecipe itemidentifier="calyxanidebionic"/>
+  </Talent>
+</Talents>

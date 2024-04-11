@@ -449,5 +449,6 @@
   <afflictiondescription.steroidaddiction>The patient is happy enough... so long as they get what they need.</afflictiondescription.steroidaddiction>
   <afflictioncauseofdeath.steroidaddiction>Died of steroid addiction.</afflictioncauseofdeath.steroidaddiction>
   <afflictioncauseofdeathself.steroidaddiction>You died of steroid addiction.</afflictioncauseofdeathself.steroidaddiction>
+  <talentdescription.itemgiveslessaffliction>Administering ‖color:gui.orange‖Bionic Organs‖end‖ gives [amount]% less ‖color:gui.orange‖Organ Rejection‖end‖.</talentdescription.itemgiveslessaffliction>
 </Override>
 </infotexts>

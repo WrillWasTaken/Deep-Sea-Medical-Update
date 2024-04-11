@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Deep Sea Medical Revived  CM-DS Rebalance" modversion="1.0.11" corepackage="False" steamworkshopid="3111738175" gameversion="1.3.0.1">
+<contentpackage name="Deep Sea Medical: Modernised" corepackage="False">
   <Text file="%ModDir%/Texts/EnglishBetterMedical.xml" />
   <NPCConversations file="%ModDir%/Texts/EnglishNPCConversations.xml" />
   <Item file="%ModDir%/Items/med_overrides.xml" />
@@ -10,9 +10,7 @@
   <Afflictions file="%ModDir%/Afflictions/affliction_overrides.xml" />
   <Afflictions file="%ModDir%/Afflictions/new_afflictions.xml" />
   <Jobs file="%ModDir%/new_job.xml" />
-  <Other file="%ModDir%/Afflictions/new_afflictions.png" />
-  <Other file="%ModDir%/Items/bionics.png" />
-  <Other file="%ModDir%/Items/new_drugs.png" />
-  <Other file="%ModDir%/Items/new_tools.png" />
-  <Other file="%ModDir%/Items/outfit_icon.png" />
+  <TalentTrees file="%ModDir%/talenttreeoverride.xml"/>
+  <Talents file="%ModDir%/talentoverrides.xml"/>
+  <Talents file="%ModDir%/newtalents.xml"/>
 </contentpackage>

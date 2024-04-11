@@ -6,7 +6,7 @@
         <Replace tag="[amount]" value="100" color="gui.green"/>
       </Description>
       <Description tag="talentdescription.bloodybusiness">
-        <Replace tag="[item]" value="entityname.basebionic" color="gui.orange"/>
+        <Replace tag="[item]" value="entityname.humanorgan" color="gui.orange"/>
       </Description>
       <AbilityGroupEffect abilityeffecttype="OnApplyTreatment">
         <Conditions>
@@ -41,6 +41,49 @@
             </StatusEffects>
           </CharacterAbilityApplyStatusEffects>
           <CharacterAbilityMarkAsLooted identifier="bloodybusiness"/>
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
+
+    <!--###-->
+
+    <Talent identifier="geneharvester">
+      <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="3,6" sheetelementsize="128,128"/>
+      <Description tag="talentdescription.geneharvester">
+        <Replace tag="[probability]" value="20" color="gui.green"/>
+      </Description>
+      <AbilityGroupEffect abilityeffecttype="OnRoundEnd">
+        <Abilities>
+          <CharacterAbilityResetPermanentStat statidentifier="geneharvester_*" value="1" setvalue="true"/>
+        </Abilities>
+      </AbilityGroupEffect>
+      <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+        <Conditions>
+          <AbilityConditionCharacter targettype="Monster">
+            <Conditional maxhealth="gt 25"/>
+            <Conditional ismachine="false" />
+            <Conditional ispet="false" />
+          </AbilityConditionCharacter>
+          <AbilityConditionCharacterNotLooted identifier="geneharvester"/>
+          <AbilityConditionServerRandom randomchance="0.2" />
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="UseTarget" spawnitemrandomly="true" >
+                <SpawnItem identifiers="geneticmaterial_unresearched" spawnposition="ThisInventory" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupEffect>
+      <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+        <Conditions>
+          <AbilityConditionCharacter targettype="Monster" />
+          <AbilityConditionCharacterNotLooted identifier="geneharvester"/>
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityMarkAsLooted identifier="geneharvester"/>
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
