@@ -1,0 +1,72 @@
+<TalentTrees>
+  <Override>
+    <TalentTree jobidentifier="medicaldoctor">
+      <SubTree identifier="medical_primary" nameidentifier="talenttree.primary" type="primary">
+        <TalentOptions requiredtalents="2" maxchosentalents="6">
+          <TalentOption identifier="healthinsurance"/>
+          <TalentOption identifier="nobodyimportantdies"/>
+          <TalentOption identifier="exampleofhealth"/>
+          <TalentOption identifier="laresistance"/>
+          <TalentOption identifier="selfcare"/>
+          <TalentOption identifier="stayinalive"/>
+        </TalentOptions>
+        <TalentOptions requiredtalents="2" maxchosentalents="5">
+          <TalentOption identifier="firemanscarry"/>
+          <TalentOption identifier="medicalcompanion"/>
+          <TalentOption identifier="dontdieonme"/>
+          <TalentOption identifier="nopressure"/>
+          <TalentOption identifier="blooddonor"/>
+        </TalentOptions>
+      </SubTree>
+      <SubTree identifier="xenologist" type="specialization" requires="medical_primary" blocks="medic,scientist">
+        <TalentOptions>
+          <TalentOption identifier="geneharvester"/>
+        </TalentOptions>
+        <TalentOptions>
+          <TalentOption identifier="bloodybusiness"/>
+          <TalentOption identifier="genesplicer"/>
+        </TalentOptions>
+        <TalentOptions>
+          <TalentOption identifier="blackmarketgenes"/>
+          <TalentOption identifier="genetampering"/>
+        </TalentOptions>
+        <TalentOptions>
+          <TalentOption identifier="geneticgenious"/>
+          <TalentOption identifier="mechanicalmastermind"/>
+        </TalentOptions>
+      </SubTree>
+      <SubTree identifier="medic" type="specialization" requires="medical_primary" blocks="xenologist,scientist">
+        <TalentOptions>
+          <TalentOption identifier="medicalexpertise"/>
+        </TalentOptions>
+        <TalentOptions>
+          <TalentOption identifier="medicalassistance"/>
+          <TalentOption identifier="emergencyresponse"/>
+        </TalentOptions>
+        <TalentOptions>
+          <TalentOption identifier="drsubmarine"/>
+          <TalentOption identifier="vitaminsupplements"/>
+        </TalentOptions>
+        <TalentOptions>
+          <TalentOption identifier="miracleworker"/>
+        </TalentOptions>
+      </SubTree>
+      <SubTree identifier="scientist" type="specialization" requires="medical_primary" blocks="xenologist,medic">
+        <TalentOptions>
+          <TalentOption identifier="plaguedoctor"/>
+        </TalentOptions>
+        <TalentOptions>
+          <TalentOption identifier="deliverysystem"/>
+          <TalentOption identifier="labcontacts"/>
+        </TalentOptions>
+        <TalentOptions>
+          <TalentOption identifier="supersoldiers"/>
+          <TalentOption identifier="whatastench"/>
+        </TalentOptions>
+        <TalentOptions>
+          <TalentOption identifier="macrodosing"/>
+        </TalentOptions>
+      </SubTree>
+    </TalentTree>
+  </Override>
+</TalentTrees>
