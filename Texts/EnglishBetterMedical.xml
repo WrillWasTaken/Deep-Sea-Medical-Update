@@ -450,5 +450,6 @@
   <afflictioncauseofdeath.steroidaddiction>Died of steroid addiction.</afflictioncauseofdeath.steroidaddiction>
   <afflictioncauseofdeathself.steroidaddiction>You died of steroid addiction.</afflictioncauseofdeathself.steroidaddiction>
   <talentdescription.itemgiveslessaffliction>Administering ‖color:gui.orange‖Bionic Organs‖end‖ gives [amount]% less ‖color:gui.orange‖Organ Rejection‖end‖.</talentdescription.itemgiveslessaffliction>
+  <talentname.mechanicalmastermind>Mechanical Mastermind</talentname.mechanicalmastermind>
 </Override>
 </infotexts>

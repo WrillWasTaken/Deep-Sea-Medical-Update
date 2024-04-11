@@ -23,8 +23,8 @@
           <TalentOption identifier="geneharvester"/>
         </TalentOptions>
         <TalentOptions>
-          <TalentOption identifier="bloodybusiness"/>
           <TalentOption identifier="genesplicer"/>
+          <TalentOption identifier="bloodybusiness"/>
         </TalentOptions>
         <TalentOptions>
           <TalentOption identifier="blackmarketgenes"/>
