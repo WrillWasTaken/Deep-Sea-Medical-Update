@@ -1127,30 +1127,33 @@
 			<Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="263,142,36,68" depth="0.6" origin="0.5,0.5" />
 			<SuitableTreatment type="damage" suitability="-33" />
 			<SuitableTreatment identifier="huskinfection" suitability="30" />
+			<SuitableTreatment identifier="infection" suitability="100" />
 			<Body width="35" height="65" density="10.2" waterdragcoefficient="1"/>
 			<MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect" HitOnlyCharacters="true">
 				<RequiredSkill identifier="medical" level="25" />
 				<StatusEffect type="OnSuccess" target="This" Condition="-100.0" setvalue="true"/>
 				<StatusEffect type="OnFailure" target="This" Condition="-100.0" setvalue="true"/>
-				<StatusEffect tags="medical" type="OnSuccess" target="UseTarget" duration="60.0">
+				<StatusEffect tags="medical" type="OnSuccess" target="UseTarget" duration="90.0">
 					<Conditional huskinfection="lt 75.0" />
-					<ReduceAffliction identifier="huskinfection" amount="0.5" />
+					<ReduceAffliction identifier="huskinfection" amount="0.25" />
 				</StatusEffect>
-				<StatusEffect tags="medical" type="OnSuccess" target="Limb" duration="60.0"> <!--15 organ damage-->
+				<StatusEffect tags="medical" type="OnSuccess" target="Limb" duration="40.0"> <!--10 organ damage-->
 					<Affliction identifier="organdamage" amount="0.25" />
 				</StatusEffect>
-				<StatusEffect type="OnSuccess" target="UseTarget" disabledeltatime="true">
-					<Affliction identifier="huskinfectionresistance" amount="600" />
+				<StatusEffect type="OnSuccess" target="UseTarget" disabledeltatime="true" duration="10">
+					<Affliction identifier="huskinfectionresistance" amount="61" />
+					<ReduceAffliction identifier="infection" amount="6" />
 				</StatusEffect>
 				<StatusEffect tags="medical" type="OnFailure" target="UseTarget" duration="60.0">
 					<Conditional huskinfection="lt 75.0" />
 					<ReduceAffliction identifier="huskinfection" amount="0.25" />
 				</StatusEffect>
-				<StatusEffect tags="medical" type="OnFailure" target="Limb" duration="60.0"> <!--30 organ damage-->
+				<StatusEffect tags="medical" type="OnFailure" target="Limb" duration="40.0"> <!--20 organ damage-->
 					<Affliction identifier="organdamage" amount="0.5" />
 				</StatusEffect>
-				<StatusEffect type="OnFailure" target="UseTarget" disabledeltatime="true">
-					<Affliction identifier="huskinfectionresistance" amount="300" />
+				<StatusEffect type="OnFailure" target="UseTarget" duration="10">
+					<Affliction identifier="huskinfectionresistance" amount="31" />
+					<ReduceAffliction identifier="infection" amount="3" />
 				</StatusEffect>
 				<StatusEffect type="OnSuccess" target="UseTarget">
 					<Conditional entitytype="eq Character"/>
@@ -1196,6 +1199,7 @@
 			</Deconstruct>
 			<SuitableTreatment identifier="symbiotichuskmedoverhaul" suitability="40" />
 			<SuitableTreatment identifier="huskinfection" suitability="40" />
+			<SuitableTreatment identifier="infection" suitability="-20" />
 			<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="897,449,63,63" origin="0.5,0.5" />
 			<Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
 			<Body width="35" height="70" density="20" />
@@ -1209,19 +1213,22 @@
 				<RequiredSkill identifier="medical" level="38" />
 				<StatusEffect tags="medical" type="OnSuccess" target="UseTarget" duration="1">
 					<Conditional huskinfection="lt 100.0" />
-					<ReduceAffliction identifier="huskinfection" amount="100" />
+					<ReduceAffliction identifier="huskinfection" amount="60" />
 				</StatusEffect>
-				<StatusEffect tags="medical" type="OnSuccess" target="UseTarget" duration="5">
+				<RequiredSkill identifier="medical" level="38" />
+				<StatusEffect tags="medical" type="OnSuccess" target="UseTarget" duration="1" conditionalcomparison="and">
 					<Conditional huskinfection="lt 100.0" />
-					<ReduceAffliction identifier="symbiotichuskmedoverhaul" amount="24" />
+					<Conditional infection="lt 150.0" />
+					<ReduceAffliction identifier="huskinfection" amount="40" />
 				</StatusEffect>
 				<StatusEffect tags="medical" type="OnFailure" target="UseTarget" duration="1">
 					<Conditional huskinfection="lt 100.0" />
-					<ReduceAffliction identifier="huskinfection" amount="60" />
+					<ReduceAffliction identifier="huskinfection" amount="40" />
 				</StatusEffect>
-				<StatusEffect tags="medical" type="OnFailure" target="UseTarget" duration="5">
+				<StatusEffect tags="medical" type="OnFailure" target="UseTarget" duration="1" conditionalcomparison="and">
 					<Conditional huskinfection="lt 100.0" />
-					<ReduceAffliction identifier="symbiotichuskmedoverhaul" amount="24" />
+					<Conditional infection="lt 15.0" />
+					<ReduceAffliction identifier="huskinfection" amount="20" />
 				</StatusEffect>
 				<StatusEffect tags="medical,calyxanide" type="OnSuccess" target="UseTarget" duration="10.0">
 					<!-- Injecting a still-conscious Husk will only piss it off and kill the "conscious" faster -->
