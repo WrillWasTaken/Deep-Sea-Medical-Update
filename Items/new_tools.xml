@@ -189,7 +189,7 @@
 		<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
 
 			<!-- Bullet removal; works fine -->
-			<StatusEffect tags="medical" type="OnUse" target="Limb,Contained" duration="6" checkconditionalalways="True" condition="-20.0" Targetslot="0" comparison="and">
+			<StatusEffect tags="medical" type="OnUse" target="UseTarget,Contained" duration="6" checkconditionalalways="True" condition="-20.0" Targetslot="0" comparison="and">
 				<RequiredItem identifier="surgeonprogrambullet" type="Contained" />
         <Conditional gunshotwound="gt 0"/>
         <Conditional condition="gt 0"/> <!--slot 0 can only contain battery cells anyway, no need to check what type of item is there aslong as it has the necessary condition.-->
@@ -198,7 +198,7 @@
 			</StatusEffect>
 
 				<!-- Organ removal; works fine -->
-			<StatusEffect tags="medical" type="OnUse" target="Limb" disabledeltatime="True">
+			<StatusEffect tags="medical" type="OnUse" target="UseTarget" disabledeltatime="True">
 				<RequiredItem identifier="surgeonprogramorgan" type="Contained" />
 				<RequiredItem items="mobilebattery" type="Contained" TargetSlot="0" />
 				<Conditional organdamage="lt 1" />
@@ -214,7 +214,7 @@
 
 			<!-- Implants; fixed after so many hours of work-->
 			<!-- Surgery implant -->
-			<StatusEffect tags="medical" type="OnUse" target="Limb" duration="1.0">
+			<StatusEffect tags="medical" type="OnUse" target="UseTarget" duration="1.0">
 				<RequiredItem identifier="surgeryimplant" type="Contained" />
 				<RequiredItem items="mobilebattery" type="Contained" TargetSlot="0" />
 				<Sound file="Content/Items/Medical/Syringe.ogg" range="400" />
