@@ -452,7 +452,7 @@
   <afflictioncauseofdeathself.steroidaddiction>You died of steroid addiction.</afflictioncauseofdeathself.steroidaddiction>
   
   <afflictionname.infection>Infected wound</afflictionname.infection>
-  <afflictiondescription.infection.low>The patient's immune system is handling a wound infection somewhat well - treatments for other pathogens are likely to be fully effective still.</afflictiondescription.infection.low>
+  <afflictiondescription.infection.low>The patient's immune system is handling a wound infection somewhat well - treatments for other infections are likely to be fully effective still.</afflictiondescription.infection.low>
   <afflictiondescription.infection>The patient's immune system is occupied with a wound infection, rendering treatments for other types of infection less effective.</afflictiondescription.infection>
   <afflictiondescription.infection.high>The patient's immune system is spread far too thin keeping a wound infection from advancing, rendering treatments against other kinds of infection nigh useless without a very high dosage.</afflictiondescription.infection.high>
 </Override>
