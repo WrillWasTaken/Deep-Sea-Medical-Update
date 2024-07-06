@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Deep Sea Medical Revived  CM-DS Rebalance" modversion="1.0.13" corepackage="False" steamworkshopid="3111738175" gameversion="1.4.5.0">
+<contentpackage name="Deep Sea Medical Revived  CM-DS Rebalance" modversion="1.0.15" corepackage="False" steamworkshopid="3111738175" gameversion="1.4.6.0">
   <Text file="%ModDir%/Texts/EnglishBetterMedical.xml" />
   <NPCConversations file="%ModDir%/Texts/EnglishNPCConversations.xml" />
   <Item file="%ModDir%/Items/med_overrides.xml" />

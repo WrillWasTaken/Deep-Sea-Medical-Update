@@ -68,10 +68,10 @@
 	</Affliction>
 
 	<Affliction name="bullet movement damage low" identifier="gunshotdamage_low" type="wounddamage" limbspecific="true" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="2">
-		<PeriodicEffect mininterval="1" maxinterval="15">
+		<PeriodicEffect mininterval="1" maxinterval="5">
       <StatusEffect target="Character">
 				<Conditional CurrentSpeed="gte 2.7"/>
-        <Affliction identifier="explosiondamage" amount="0.5"/>
+        <Affliction identifier="explosiondamage" amount="0.2"/>
       </StatusEffect>
     </PeriodicEffect>
 		<Effect minstrength="0" maxstrength="2" strengthchange="-10"/>
@@ -80,10 +80,10 @@
 	</Affliction>
 
 	<Affliction name="bullet movement damage medium" identifier="gunshotdamage_medium" type="wounddamage" limbspecific="true" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="2">
-		<PeriodicEffect mininterval="1" maxinterval="15">
+		<PeriodicEffect mininterval="1" maxinterval="5">
       <StatusEffect target="Character">
 				<Conditional CurrentSpeed="gte 2.7"/>
-        <Affliction identifier="explosiondamage" amount="1"/>
+        <Affliction identifier="explosiondamage" amount="0.3"/>
       </StatusEffect>
     </PeriodicEffect>
 		<Effect minstrength="0" maxstrength="2" strengthchange="-10"/>
@@ -92,10 +92,10 @@
 	</Affliction>
 
 	<Affliction name="bullet movement damage high" identifier="gunshotdamage_high" type="wounddamage" limbspecific="true" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="2">
-		<PeriodicEffect mininterval="1" maxinterval="15">
+		<PeriodicEffect mininterval="1" maxinterval="5">
       <StatusEffect target="Character">
 				<Conditional CurrentSpeed="gte 2.7"/>
-        <Affliction identifier="explosiondamage" amount="1.5"/>
+        <Affliction identifier="explosiondamage" amount="0.4"/>
       </StatusEffect>
     </PeriodicEffect>
 		<Effect minstrength="0" maxstrength="2" strengthchange="-10"/>
