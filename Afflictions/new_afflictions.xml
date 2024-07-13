@@ -30,7 +30,7 @@
 		<icon texture="Content/UI/MainIconsAtlas.png" sourcerect="640,640,128,128" color="0,255,0,255" origin="0,0" />
 	</Affliction>
 
-	<Affliction name="Surgical incision" identifier="incision" type="resistance" causeofdeathdescription="Died in surgery" selfcauseofdeathdescription="You have died due to a surgical incision." limbspecific="true" maxstrength="10" damageoverlayalpha="1">
+	<Affliction name="Surgical incision" identifier="incision" type="resistance" causeofdeathdescription="Died in surgery" selfcauseofdeathdescription="You have died due to a surgical incision." limbspecific="false" indicatorlimb="Torso" maxstrength="10" damageoverlayalpha="1">
 		<Effect minstrength="0" maxstrength="10">
 			<StatusEffect target="Limb">
 				<Affliction identifier="bleeding" amount="0.2" />
