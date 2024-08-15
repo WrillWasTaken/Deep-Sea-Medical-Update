@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Deep Sea Medical Revived" modversion="1.0.6" corepackage="False" steamworkshopid="3070733476" gameversion="1.2.8.0">
+<contentpackage name="Deep Sea Medical Revived" modversion="1.0.7" corepackage="False" steamworkshopid="3070733476" gameversion="1.5.9.1">
   <Text file="%ModDir%/Texts/EnglishBetterMedical.xml" />
   <NPCConversations file="%ModDir%/Texts/EnglishNPCConversations.xml" />
   <Item file="%ModDir%/Items/med_overrides.xml" />

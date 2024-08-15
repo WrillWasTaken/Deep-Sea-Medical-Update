@@ -77,12 +77,12 @@
 				<!-- conditional detects on whole body for some reason ~
 				<Conditional incision="lte 0"/>-->
 				<Sound file="Content/Items/Medical/Syringe.ogg" range="400" />
-				<Affliction identifier="incision" amount="10" />
+				<Affliction identifier="incision" amount="20" />
 			</StatusEffect>
 			<StatusEffect tags="medical" type="OnFailure" target="Limb" disabledeltatime="true" comparison="And">
 				<Conditional surgeryready="gte 1" />
 				<Sound file="Content/Items/Medical/Syringe.ogg" range="400" />
-				<Affliction identifier="incision" amount="10" />
+				<Affliction identifier="incision" amount="20" />
 			</StatusEffect>
 			<!-- Remove the item when fully used -->
 			<StatusEffect type="OnBroken" target="This">

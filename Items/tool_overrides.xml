@@ -31,10 +31,14 @@
 			<Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect" displaycontainedstatus="true">
 				<sprite name="Diving Mask Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.7" hidelimb="false" hideotherwearables="false" sourcerect="226,326,69,68" origin="0.4,0.3" hidewearablesoftype="moustache,beard" />
 				<StatusEffect type="OnWearing" target="Character" HideFace="true" setvalue="true" disabledeltatime="true" />
-				<StatusEffect type="OnWearing" target="Contained,Character"	Condition="-0.5" comparison="Or">
+				<StatusEffect type="OnWearing" target="Contained,Character"	Condition="-0.5" comparison="And">
 					<Conditional IsDead="false" />
 					<RequiredItem items="ethertank" type="Contained" />
 					<Affliction identifier="anesthesia" amount="0.5" />
+				</StatusEffect>	
+				<StatusEffect type="OnWearing" target="Character" setvalue="true">
+					<Conditional IsPlayer="false" />
+					<Affliction identifier="anesthesia" amount="15" />
 				</StatusEffect>	
 				<StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.5" comparison="Or">
 					<Conditional IsDead="false" />
