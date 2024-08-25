@@ -151,16 +151,16 @@
 				<Conditional incision="gte 1" />
 				<Sound file="Content/Items/Medical/Syringe.ogg" range="400" />
 				<ReduceAffliction identifier="gunshotwound" amount="15" />
-        <Affliction identifier="bloodloss" amount="4"/>
-        <Affliction identifier="bleeding" amount="2"/>
+				<Affliction identifier="bloodloss" amount="4"/>
+				<Affliction identifier="bleeding" amount="2"/>
 			</StatusEffect>
 			<StatusEffect type="OnFailure" target="Limb" duration="1.0" comparison="And">
 				<Conditional surgeryready="gte 1" />
 				<Conditional incision="gte 1" />
 				<Sound file="Content/Items/Medical/Syringe.ogg" range="400" />
 				<ReduceAffliction identifier="gunshotwound" amount="10" />
-        <Affliction identifier="bloodloss" amount="6"/>
-        <Affliction identifier="bleeding" amount="2"/>
+				<Affliction identifier="bloodloss" amount="6"/>
+				<Affliction identifier="bleeding" amount="2"/>
 			</StatusEffect>
 			<!-- Remove the item when fully used -->
 			<StatusEffect type="OnBroken" target="This">
@@ -187,31 +187,31 @@
 		<Sprite texture="new_tools.png" sourcerect="265,6,45,53" depth="0.6" origin="0.5,0.5" />
 		<Body width="28" height="15" density="400" />
 		<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
-
+			
 			<!-- Bullet removal; works fine -->
 			<StatusEffect tags="medical" type="OnUse" target="UseTarget,Contained" duration="6" checkconditionalalways="True" condition="-20.0" Targetslot="0" comparison="and">
 				<RequiredItem identifier="surgeonprogrambullet" type="Contained" />
-        <Conditional gunshotwound="gt 0"/>
-        <Conditional condition="gt 0"/> <!--slot 0 can only contain battery cells anyway, no need to check what type of item is there aslong as it has the necessary condition.-->
+				<Conditional gunshotwound="gt 0"/>
+				<Conditional condition="gt 0"/> <!--slot 0 can only contain battery cells anyway, no need to check what type of item is there aslong as it has the necessary condition.-->
 				<Sound file="Content/Items/Medical/Syringe.ogg" range="400" />
 				<ReduceAffliction identifier="gunshotwound" amount="5" />
 			</StatusEffect>
-
-				<!-- Organ removal; works fine -->
+			
+			<!-- Organ removal; works fine -->
 			<StatusEffect tags="medical" type="OnUse" target="UseTarget" disabledeltatime="True">
 				<RequiredItem identifier="surgeonprogramorgan" type="Contained" />
 				<RequiredItem items="mobilebattery" type="Contained" TargetSlot="0" />
 				<Conditional organdamage="lt 1" />
 				<SpawnItem identifier="humanorgan" spawnposition="This" />
-        <Affliction identifier="missingorgan" amount="9"/>
+				<Affliction identifier="missingorgan" amount="9"/>
 			</StatusEffect>
 			<StatusEffect tags="medical" type="OnUse" target="Limb,Contained" duration="5" checkconditionalalways="True" condition="-25.0" Targetslot="0" comparison="and">
 				<RequiredItem identifier="surgeonprogramorgan" type="Contained" />
-        <Conditional organdamage="gt 0"/>
-        <Conditional condition="gt 0"/>
+				<Conditional organdamage="gt 0"/>
+				<Conditional condition="gt 0"/>
 				<ReduceAffliction identifier="organdamage" amount="4" />
 			</StatusEffect>
-
+			
 			<!-- Implants; fixed after so many hours of work-->
 			<!-- Surgery implant -->
 			<StatusEffect tags="medical" type="OnUse" target="UseTarget" duration="1.0">
@@ -220,7 +220,7 @@
 				<Sound file="Content/Items/Medical/Syringe.ogg" range="400" />
 				<Affliction identifier="surgeryreadyimplant" amount="10" />
 			</StatusEffect>
-
+			
 			<!-- Addiction implant -->
 			<StatusEffect tags="medical" type="OnUse" target="UseTarget" duration="1.0" ConditionalComparison="And">
 				<RequiredItem identifier="mobilebattery" type="Contained" TargetSlot="0" />
@@ -235,12 +235,12 @@
 				<RequiredItem items="mobilebattery" type="Contained" TargetSlot="0" />
 				<Remove />
 			</StatusEffect>
-
-      <StatusEffect tags="medical" type="OnUse" target="Contained" TargetSlot="0" condition="-100" disabledeltatime="true">
+			
+			<StatusEffect tags="medical" type="OnUse" target="Contained" TargetSlot="0" condition="-100" disabledeltatime="true">
 				<RequiredItem items="surgeonprogramconsumable" type="Contained" />
 				<RequiredItem items="mobilebattery" type="Contained" TargetSlot="0" />
 			</StatusEffect>
-
+			
 		</MeleeWeapon>
 		<ItemContainer capacity="1" maxstacksize="1" slotsperrow="2" containedstateindicatorstyle="battery" containedstateindicatorslot="0">
 			<Containable items="mobilebattery" />
@@ -264,7 +264,7 @@
 	</Item>
 	<!-- Autosurgeon program: organ extraction -->
 	<Item name="" identifier="surgeonprogramorgan" variantof="surgeonprogrambullet"/>
-
+	
 	<!-- Medical Degree: joke item, medic spawns in with one -->
 	<Item name="" identifier="meddegree" category="Misc" tags="smallitem" cargocontaineridentifier="mediccrate" scale="0.5" impactsoundtag="impact_metal_light" isshootable="true">
 		<Upgrade gameversion="0.10.0.0" scale="0.5" />
@@ -310,8 +310,8 @@
 				<Sound file="Content/Items/Medical/Syringe.ogg" range="400" />
 				<Affliction identifier="missingorgan" amount="10" />
 				<Affliction identifier="organdamage" amount="-40" />
-        <Affliction identifier="bloodloss" amount="8"/>
-        <Affliction identifier="bleeding" amount="4"/>
+				<Affliction identifier="bloodloss" amount="8"/>
+				<Affliction identifier="bleeding" amount="4"/>
 			</StatusEffect>
 			<StatusEffect tags="medical" type="OnFailure" target="Limb" disabledeltatime="true" comparison="And" delay="0.05">
 				<Conditional surgeryready="gte 1" />
@@ -319,8 +319,8 @@
 				<Sound file="Content/Items/Medical/Syringe.ogg" range="400" />
 				<Affliction identifier="missingorgan" amount="10" />
 				<Affliction identifier="organdamage" amount="-20" />
-        <Affliction identifier="bloodloss" amount="10"/>
-        <Affliction identifier="bleeding" amount="5"/>
+				<Affliction identifier="bloodloss" amount="10"/>
+				<Affliction identifier="bleeding" amount="5"/>
 			</StatusEffect>
 			<!-- Remove the item when fully used -->
 			<StatusEffect type="OnBroken" target="This">
